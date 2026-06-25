@@ -44,14 +44,14 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 ## 6. Tech Stack & Architecture
 Settled decision (June 2026) on the division of tools, to avoid re-deciding this later:
 
-- **MailerLite — subscribers and email only.** Owns the waitlist subscriber list, the embedded signup form widget, and email automations (warm-up sequence, founding-buyer email). It does not host any page and is not used for taking orders — its free-tier "1 digital product/booking" feature doesn't fit a physical multi-unit product, so it's intentionally out of scope here.
-- **GitHub + Vercel — everything else.** Owns the actual page (`pre-launch.html`), all branding/design, hosting, and deployment. The MailerLite form is just a small embed snippet dropped into this page; the page itself stays fully custom and never moves to MailerLite's own site/landing-page builder. Push to `main` → auto-deploys to [terrified-toys.vercel.app](https://terrified-toys.vercel.app).
+- **MailerLite — subscribers and email only.** Owns the waitlist subscriber list (one group per persona) and email automations (warm-up sequence, founding-buyer email). It does not host any page and is not used for taking orders — its free-tier "1 digital product/booking" feature doesn't fit a physical multi-unit product, so it's intentionally out of scope here.
+- **GitHub + Vercel — everything else, including the MailerLite connection itself.** Owns the actual pages (`pre-launch.html` + 4 persona pages in `landing/`), all branding/design, hosting, and deployment — and now also a small serverless function (`api/subscribe.js`) that each form POSTs to, which calls MailerLite's API directly and routes the signup into the right persona group. The MailerLite API key lives only as an encrypted Vercel environment variable, never in the page source or the repo. Push to `main` → auto-deploys to [terrified-toys.vercel.app](https://terrified-toys.vercel.app).
 - **Purchasing/ordering (when needed) — Stripe Payment Links, no database.** At demo-run scale (10-25 units), a Stripe Payment Link is enough: Stripe hosts checkout, emails order notifications, and its dashboard *is* the order record. No custom database, backend, or Shopify build is needed at this stage — revisit only if order volume or SKU complexity outgrows what's manageable by checking the Stripe dashboard directly. On hold until demo stock is closer to arriving.
 
 ## 7. Milestones & Timeline
 | Milestone | Target |
 |---|---|
-| Pre-launch waitlist page live (real MailerLite form connected) | Week 1 |
+| Pre-launch waitlist page + 4 persona pages live, MailerLite connected via serverless proxy | Week 1 |
 | Recover/finalize designs | Week 1-2 |
 | Manufacturer quotes received | Week 2 |
 | Demo run ordered | Week 2-3 |
@@ -63,7 +63,7 @@ Settled decision (June 2026) on the division of tools, to avoid re-deciding this
 
 ## 8. Risks
 - **Design recovery:** if original designs can't be found, Trinity needs time to recreate them — this is the current critical path blocker, ahead of manufacturing.
-- **Waitlist tooling dependency:** the pre-launch page captures signups via a free MailerLite embedded form. Free-tier caps at 250 subscribers and 2,500 emails/month — fine for the current waitlist/founding-buyer scale, but worth monitoring as the list grows past that. MailerLite's free plan only supports 1 active "digital product/booking" — it is being used purely for email capture and sequencing here, not for taking actual toy orders, since it doesn't fit a physical multi-unit product.
+- **Waitlist tooling dependency:** signups are captured via a serverless function (`api/subscribe.js`) calling MailerLite's API directly — free-tier caps at 250 subscribers and 2,500 emails/month, fine for current scale but worth monitoring as the list grows. MailerLite's free plan only supports 1 active "digital product/booking" — it is being used purely for email capture and sequencing, not for taking actual toy orders, since it doesn't fit a physical multi-unit product.
 - **Founding-price margin compression:** the $30 NZD founding-buyer price leaves a thinner margin than the standard $30-45 range if real manufacturing costs land above estimate — see Unit Economics.
 - **Manufacturer reliability:** untested supplier relationship — mitigate by ordering the smallest viable demo batch before committing to a larger production run.
 - **Market validation:** the core bet is that the joke travels on social video. Treat the demo run as the test; if engagement is weak, revisit before investing in a larger production run.
@@ -81,4 +81,4 @@ Settled decision (June 2026) on the division of tools, to avoid re-deciding this
 2. Decide which manufacturer to formally request quotes from.
 3. Confirm the 10 warm pre-sell buyers (who, specifically).
 4. Set up a Stripe Payment Link for order-taking once demo stock is closer to arriving (see Tech Stack & Architecture — decided approach, just not yet built).
-5. Create a free MailerLite account/group/embedded form and send the embed code so it can be connected to `pre-launch.html` (currently a Formspree placeholder); test a submission before sharing the page anywhere.
+5. ~~Connect MailerLite to the waitlist pages~~ — done. All 5 forms POST to `api/subscribe.js`, which routes signups into per-persona MailerLite groups (Waiting List, Petty Partner, Hunting Lad, Dog Content, Prank Gifter). Remaining manual step: build the actual email warm-up automations inside the MailerLite dashboard (not API-accessible on the free plan) for each group.

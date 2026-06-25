@@ -38,7 +38,7 @@ Persona-specific channel detail (which channel for which persona, and why) now l
 | Paid social ads | Skip for demo run — budget is $250 and should go to product, not ads, until organic content validates the joke | — | — | — | $0 for now |
 
 ### Pre-launch page (`pre-launch.html`)
-Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, both current product photos (black poodle/deer, apricot poodle/rabbit) used as hero social proof. Captures name + email via a MailerLite embedded form (switched from Formspree; a Supabase-backed option was scoped but shelved to avoid a paid-plan requirement).
+Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, both current product photos (black poodle/deer, apricot poodle/rabbit) used as hero social proof. Captures name + email and posts to `api/subscribe.js`, a serverless function that calls MailerLite's API directly (switched from Formspree; a Supabase-backed option was scoped but shelved to avoid a paid-plan requirement; MailerLite's no-code embed widget was also considered but the serverless-proxy approach was used instead so the page keeps its own styling and one shared backend can route 5 different pages into 5 different persona groups).
 
 **Why MailerLite over Formspree/Supabase:** MailerLite's free plan (250 subscribers, 2,500 emails/month) gives a real subscriber list plus 3 free automations — meaning the email warm-up sequence and founding-buyer email below can run natively inside the same free tool, instead of needing a separate email sender. Formspree only gave us an inbox; Supabase would have meant either exposing write-access credentials client-side or paying to lock it down properly.
 
@@ -53,7 +53,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - CTA copy stays in brand voice ("Reserve Mine — My Dog Doesn't Need To Know Yet") instead of generic "Sign Up."
 - Price shown in NZD with NZ/AU shipping called out explicitly to avoid currency-confusion bounce.
 
-**Setup task (Daniel):** create a free MailerLite account, a "Waitlist" subscriber group, and an embedded form, then send the embed code so it can be dropped into `pre-launch.html` in place of the current Formspree placeholder. Until then the form will fail silently to visitors (error state will show).
+**Status: live.** MailerLite account, groups, and the serverless connection are all built and tested end-to-end. Remaining setup task (Daniel): build the actual email warm-up automations inside the MailerLite dashboard for each group — automations aren't API-accessible on the free plan, so that part stays manual.
 
 ### Per-Persona Funnels & Landing Pages (built)
 Each persona now gets its own dedicated landing page rather than every channel pointing at the generic `pre-launch.html` — same visual system, persona-specific hero copy and CTA, drawn from [brand-strategy.md](brand-strategy.md):
@@ -62,14 +62,14 @@ Each persona now gets its own dedicated landing page rather than every channel p
 - `landing/dog-content.html` — minimal copy, video/visual-first, deadpan
 - `landing/prank-gifter.html` — gifting/white-elephant framing
 
-`pre-launch.html` stays as the generic/default page for warm outreach and any bio link where persona isn't known. Each persona page's MailerLite form tags the signup into a persona-specific group (hidden `persona` field already wired in) so the email warm-up sequence can eventually speak to each persona specifically — same MailerLite embed-code swap-in needed as `pre-launch.html`.
+`pre-launch.html` stays as the generic/default page for warm outreach and any bio link where persona isn't known. Each persona page's form posts a hidden `persona` field to `api/subscribe.js`, which routes the signup into that persona's own MailerLite group — live and tested, so the email warm-up sequence can already speak to each persona specifically once the automations themselves are built in MailerLite.
 
 ## 5. Content Calendar (8 weeks: pre-sell → demo arrival → cold launch)
 
 | Week | Content Piece | Channel | Notes | Status |
 |---|---|---|---|---|
-| 1 | Publish pre-launch waitlist page, connect MailerLite embedded form | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done (page built); MailerLite embed swap pending |
-| 1 | Publish 4 persona landing pages (`landing/*.html`), connect MailerLite forms | Web | Daniel — every persona-specific post/ad should link here instead of the generic page | Done (pages built); MailerLite embed swap pending |
+| 1 | Publish pre-launch waitlist page, connect to MailerLite | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done — live and tested |
+| 1 | Publish 4 persona landing pages (`landing/*.html`), connect to MailerLite | Web | Daniel — every persona-specific post/ad should link here instead of the generic page | Done — live and tested |
 | 1 | Direct outreach to 10 warm buyers ("first run, want one?") | DM/text | Daniel — now links to the waitlist page instead of an ad-hoc form | Pending |
 | 1 | Behind-the-scenes: "why we're doing this" founder post | Instagram Feed | Trinity, sets authentic tone | Pending |
 | 2 | Order demo run from manufacturer | — | Daniel, depends on manufacturer quote | Pending |
@@ -86,8 +86,8 @@ Each persona now gets its own dedicated landing page rather than every channel p
 | 8 | Review/recap: where things stand, thank warm buyers | Instagram Feed | Builds trust/community for next phase | Pending |
 
 ## 6. Content Pieces Needed
-- **Pre-launch waitlist page** (must-have, built) — `pre-launch.html`, generic/default destination for traffic where persona isn't known; needs a real MailerLite embedded-form code connected before launch
-- **4 persona landing pages** (must-have, built) — `landing/petty-partner.html`, `landing/hunting-lad.html`, `landing/dog-content.html`, `landing/prank-gifter.html`; each needs the same MailerLite embed-code swap-in as the main page
+- **Pre-launch waitlist page** (must-have, built and live) — `pre-launch.html`, generic/default destination for traffic where persona isn't known; MailerLite connection tested end-to-end
+- **4 persona landing pages** (must-have, built and live) — `landing/petty-partner.html`, `landing/hunting-lad.html`, `landing/dog-content.html`, `landing/prank-gifter.html`; each routes into its own MailerLite group via `api/subscribe.js`
 - **Email warm-up sequence** (must-have) — 2-3 short emails to waitlist signups during weeks 2-4 so early interest doesn't go cold before stock arrives
 - **Unboxing video** (must-have) — first reveal of demo stock
 - **3-5 design reveal teasers** (must-have) — one per toy design, builds anticipation pre-stock
@@ -122,7 +122,7 @@ Each persona now gets its own dedicated landing page rather than every channel p
 - **Risk: warm buyers don't film/share reactions (most valuable content depends on their cooperation).** Mitigation: ask explicitly when delivering toys, make it easy (a 10-second video request, not a production ask), consider a small thank-you incentive for those who do.
 
 ## 10. Next Steps
-1. Create a free MailerLite account, a "Waitlist" group, and an embedded form; send the embed code so it can replace the Formspree placeholder in `pre-launch.html` and all 4 `landing/*.html` pages, then test a submission end-to-end on each before sharing any link anywhere.
+1. ~~Connect MailerLite to all 5 pages~~ — done. `api/subscribe.js` routes each page's signups into the right persona group; tested end-to-end. Remaining: build the email warm-up automations inside the MailerLite dashboard for each group (automations are UI-only on the free plan).
 2. Confirm manufacturer and get demo run quote/lead time in writing (see manufacturer shortlist).
 3. Lock in the 10 warm pre-sell buyers this week — send them the waitlist page link, not an ad-hoc DM form.
 4. Trinity starts teaser content (design reveals) while demo run is in production; every post/bio links to the waitlist page.
