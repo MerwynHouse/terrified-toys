@@ -39,7 +39,7 @@
 | TikTok (organic) | Primary discovery engine for this audience; short comedic video is the native format for the joke | Reels-style clips: unboxing, "first encounter," destruction in slow-mo | Medium-High | $0 (time only) |
 | Instagram Reels + Feed | Same content repurposed; feed posts double as product catalog | Reels + carousel product shots | Medium | $0 (time only) |
 | Facebook pet groups | Earned/community — share organically in relevant groups (with permission/no-spam norms) | Native posts, photos/video + caption | Low | $0 |
-| Direct outreach (warm pre-sell) | Fastest, most reliable 10 sales — friends/family with pets | DM/text + a simple order form or direct payment link | Low | $0 |
+| Direct outreach (warm pre-sell) | Fastest, most reliable 10 sales — friends/family with pets | DM/text + a Stripe Payment Link | Low | $0 |
 | Paid social ads | Skip for demo run — budget is $250 and should go to product, not ads, until organic content validates the joke | — | — | $0 for now |
 
 ### Pre-launch page (`pre-launch.html`)
@@ -47,7 +47,9 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 
 **Why MailerLite over Formspree/Supabase:** MailerLite's free plan (250 subscribers, 2,500 emails/month) gives a real subscriber list plus 3 free automations — meaning the email warm-up sequence and founding-buyer email below can run natively inside the same free tool, instead of needing a separate email sender. Formspree only gave us an inbox; Supabase would have meant either exposing write-access credentials client-side or paying to lock it down properly.
 
-**Important limitation:** MailerLite's free plan includes only 1 active "digital product or booking" slot, which doesn't fit a physical, multi-unit plush toy. MailerLite is being used purely as the subscriber/email tool here — actual order-taking for the demo run and cold launch still needs its own mechanism (see "Simple order form/payment link" below), not MailerLite's product-sales feature.
+**Important limitation:** MailerLite's free plan includes only 1 active "digital product or booking" slot, which doesn't fit a physical, multi-unit plush toy. MailerLite is being used purely as the subscriber/email tool here — actual order-taking for the demo run and cold launch still needs its own mechanism (see "Stripe Payment Link" below), not MailerLite's product-sales feature.
+
+**Settled tech split (see [business-plan.md](business-plan.md) Tech Stack & Architecture for full detail):** MailerLite = subscribers + email only. GitHub/Vercel = the page itself, hosting, and auto-deploy. Stripe Payment Link = purchasing, when needed — no database required at this scale.
 
 **Conversion approach applied (NZ/AU, novelty/humor niche):**
 - Headline leads with the visual joke, not a generic "coming soon" — the product image carries the pitch.
@@ -73,7 +75,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 | 6 | Compile warm-buyer reaction clips into highlight content | TikTok + Reels + Feed | This is the most likely "breakout" content candidate | Pending |
 | 6 | Share in 2-3 relevant Facebook pet groups | Facebook | Low effort, direct | Pending |
 | 7 | "Destruction" content — toy meets its fate, in slow motion | TikTok + Reels | Leans fully into the joke/premise | Pending |
-| 7 | Open cold-audience ordering (Shopify or simple order form) | All channels | CTA push begins; waitlist gets first/early access before this goes wide | Pending |
+| 7 | Open cold-audience ordering (Stripe Payment Link) | All channels | CTA push begins; waitlist gets first/early access before this goes wide | Pending |
 | 7 | Founding-buyer email to waitlist: early access + discount window before public launch | Email | Converts warm waitlist before cold-audience push starts | Pending |
 | 8 | Gift-angle content: "tag someone whose dog needs this" | TikTok + Reels + Facebook | Targets secondary audience (gift buyers) | Pending |
 | 8 | Review/recap: where things stand, thank warm buyers | Instagram Feed | Builds trust/community for next phase | Pending |
@@ -87,7 +89,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - **Pet reaction UGC compilation** (must-have) — highest-value asset, likely breakout candidate
 - **"Destruction" slow-mo video** (must-have) — most directly sells the core joke
 - **Gift-angle post** (nice-to-have) — targets secondary audience, can reuse existing footage
-- **Simple order form/payment link** (must-have) — needed before cold launch (week 7); doesn't need full Shopify build for demo run
+- **Stripe Payment Link** (must-have) — needed before cold launch (week 7); no database or full Shopify build needed at demo-run scale, Stripe's own dashboard is the order record
 - **Countdown/launch-date messaging** (nice-to-have) — once demo arrival date is confirmed with the manufacturer, add a real countdown to the waitlist page rather than a vague "coming soon"
 
 ## 7. Success Metrics
@@ -119,4 +121,4 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 3. Lock in the 10 warm pre-sell buyers this week — send them the waitlist page link, not an ad-hoc DM form.
 4. Trinity starts teaser content (design reveals) while demo run is in production; every post/bio links to the waitlist page.
 5. Draft the 2-3 email warm-up sequence for waitlist signups (weeks 2-4).
-6. Set up the simplest possible order-taking mechanism for cold launch (doesn't need to be Shopify yet — a form + manual fulfillment is fine for 50 orders).
+6. Set up a Stripe Payment Link for order-taking ahead of cold launch — no database needed at this scale (on hold until demo stock is closer to arriving).

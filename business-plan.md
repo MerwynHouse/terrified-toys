@@ -39,7 +39,14 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 - Phase 3: cold-audience push targeting 50 orders within 90 days of stock arrival, with waitlist signups converted first via a founding-buyer discount window.
 - No paid advertising budget at this stage — $250 goes entirely to product, not marketing spend.
 
-## 6. Milestones & Timeline
+## 6. Tech Stack & Architecture
+Settled decision (June 2026) on the division of tools, to avoid re-deciding this later:
+
+- **MailerLite — subscribers and email only.** Owns the waitlist subscriber list, the embedded signup form widget, and email automations (warm-up sequence, founding-buyer email). It does not host any page and is not used for taking orders — its free-tier "1 digital product/booking" feature doesn't fit a physical multi-unit product, so it's intentionally out of scope here.
+- **GitHub + Vercel — everything else.** Owns the actual page (`pre-launch.html`), all branding/design, hosting, and deployment. The MailerLite form is just a small embed snippet dropped into this page; the page itself stays fully custom and never moves to MailerLite's own site/landing-page builder. Push to `main` → auto-deploys to [terrified-toys.vercel.app](https://terrified-toys.vercel.app).
+- **Purchasing/ordering (when needed) — Stripe Payment Links, no database.** At demo-run scale (10-25 units), a Stripe Payment Link is enough: Stripe hosts checkout, emails order notifications, and its dashboard *is* the order record. No custom database, backend, or Shopify build is needed at this stage — revisit only if order volume or SKU complexity outgrows what's manageable by checking the Stripe dashboard directly. On hold until demo stock is closer to arriving.
+
+## 7. Milestones & Timeline
 | Milestone | Target |
 |---|---|
 | Pre-launch waitlist page live (real MailerLite form connected) | Week 1 |
@@ -52,7 +59,7 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 | Cold-audience ordering opens | Week 7 |
 | First sale (cold) | Target: within 90 days of stock arrival |
 
-## 7. Risks
+## 8. Risks
 - **Design recovery:** if original designs can't be found, Trinity needs time to recreate them — this is the current critical path blocker, ahead of manufacturing.
 - **Waitlist tooling dependency:** the pre-launch page captures signups via a free MailerLite embedded form. Free-tier caps at 250 subscribers and 2,500 emails/month — fine for the current waitlist/founding-buyer scale, but worth monitoring as the list grows past that. MailerLite's free plan only supports 1 active "digital product/booking" — it is being used purely for email capture and sequencing here, not for taking actual toy orders, since it doesn't fit a physical multi-unit product.
 - **Founding-price margin compression:** the $30 NZD founding-buyer price leaves a thinner margin than the standard $30-45 range if real manufacturing costs land above estimate — see Unit Economics.
@@ -60,7 +67,7 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 - **Market validation:** the core bet is that the joke travels on social video. Treat the demo run as the test; if engagement is weak, revisit before investing in a larger production run.
 - **Cash:** bootstrapped, no marketing budget — growth depends entirely on organic content performance.
 
-## 8. What Success Looks Like (Year 1)
+## 9. What Success Looks Like (Year 1)
 - Demo run sold out to warm buyers
 - 50 cold-audience orders within 90 days of stock arrival
 - One piece of content with genuine organic breakout reach
@@ -71,5 +78,5 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 1. Locate or recreate the original toy designs.
 2. Decide which manufacturer to formally request quotes from.
 3. Confirm the 10 warm pre-sell buyers (who, specifically).
-4. Decide on order-taking mechanism for cold launch (simple form vs. Shopify).
+4. Set up a Stripe Payment Link for order-taking once demo stock is closer to arriving (see Tech Stack & Architecture — decided approach, just not yet built).
 5. Create a free MailerLite account/group/embedded form and send the embed code so it can be connected to `pre-launch.html` (currently a Formspree placeholder); test a submission before sharing the page anywhere.
