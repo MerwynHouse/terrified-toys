@@ -163,10 +163,9 @@
     <h2>Join The Waitlist</h2>
     <p class="section-sub">First 25 get it before anyone else. We'll only email you when there's something worth saying.</p>
 
-    <form id="waitlistForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form id="waitlistForm" action="/api/subscribe" method="POST">
       <input type="text" name="name" placeholder="Your name" required>
       <input type="email" name="email" placeholder="Your email" required>
-      <input type="hidden" name="_subject" value="New Terrified Toys waitlist signup — Hunting Lad">
       <input type="hidden" name="persona" value="hunting-lad">
       <button type="submit" class="cta-btn">Reserve My Spot</button>
     </form>
@@ -201,10 +200,15 @@
     e.preventDefault();
     errorMsg.style.display = 'none';
     var data = new FormData(form);
+    var payload = {
+      name: data.get('name'),
+      email: data.get('email'),
+      persona: data.get('persona') || undefined
+    };
     fetch(form.action, {
       method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     }).then(function(response){
       if(response.ok){
         form.style.display = 'none';
