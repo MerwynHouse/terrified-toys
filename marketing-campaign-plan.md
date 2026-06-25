@@ -35,7 +35,7 @@
 ## 4. Channel Strategy
 | Channel | Why | Format | Effort | Budget |
 |---|---|---|---|---|
-| Pre-launch waitlist page | Central conversion point for every other channel — gives social content somewhere to send traffic before there's a Shopify store | Single-page site (`pre-launch.html`), Formspree-backed name+email form | Low (built) | $0 |
+| Pre-launch waitlist page | Central conversion point for every other channel — gives social content somewhere to send traffic before there's a Shopify store | Single-page site (`pre-launch.html`), MailerLite-backed name+email form | Low (built) | $0 |
 | TikTok (organic) | Primary discovery engine for this audience; short comedic video is the native format for the joke | Reels-style clips: unboxing, "first encounter," destruction in slow-mo | Medium-High | $0 (time only) |
 | Instagram Reels + Feed | Same content repurposed; feed posts double as product catalog | Reels + carousel product shots | Medium | $0 (time only) |
 | Facebook pet groups | Earned/community — share organically in relevant groups (with permission/no-spam norms) | Native posts, photos/video + caption | Low | $0 |
@@ -43,7 +43,11 @@
 | Paid social ads | Skip for demo run — budget is $250 and should go to product, not ads, until organic content validates the joke | — | — | $0 for now |
 
 ### Pre-launch page (`pre-launch.html`)
-Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, both current product photos (black poodle/deer, apricot poodle/rabbit) used as hero social proof. Captures name + email via Formspree.
+Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, both current product photos (black poodle/deer, apricot poodle/rabbit) used as hero social proof. Captures name + email via a MailerLite embedded form (switched from Formspree; a Supabase-backed option was scoped but shelved to avoid a paid-plan requirement).
+
+**Why MailerLite over Formspree/Supabase:** MailerLite's free plan (250 subscribers, 2,500 emails/month) gives a real subscriber list plus 3 free automations — meaning the email warm-up sequence and founding-buyer email below can run natively inside the same free tool, instead of needing a separate email sender. Formspree only gave us an inbox; Supabase would have meant either exposing write-access credentials client-side or paying to lock it down properly.
+
+**Important limitation:** MailerLite's free plan includes only 1 active "digital product or booking" slot, which doesn't fit a physical, multi-unit plush toy. MailerLite is being used purely as the subscriber/email tool here — actual order-taking for the demo run and cold launch still needs its own mechanism (see "Simple order form/payment link" below), not MailerLite's product-sales feature.
 
 **Conversion approach applied (NZ/AU, novelty/humor niche):**
 - Headline leads with the visual joke, not a generic "coming soon" — the product image carries the pitch.
@@ -52,18 +56,18 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - CTA copy stays in brand voice ("Reserve Mine — My Dog Doesn't Need To Know Yet") instead of generic "Sign Up."
 - Price shown in NZD with NZ/AU shipping called out explicitly to avoid currency-confusion bounce.
 
-**Setup task (Daniel):** swap the placeholder `https://formspree.io/f/YOUR_FORM_ID` in `pre-launch.html` for a real Formspree form ID before sharing the link anywhere. Until then submissions will fail silently to visitors (error state will show).
+**Setup task (Daniel):** create a free MailerLite account, a "Waitlist" subscriber group, and an embedded form, then send the embed code so it can be dropped into `pre-launch.html` in place of the current Formspree placeholder. Until then the form will fail silently to visitors (error state will show).
 
 ## 5. Content Calendar (8 weeks: pre-sell → demo arrival → cold launch)
 
 | Week | Content Piece | Channel | Notes | Status |
 |---|---|---|---|---|
-| 1 | Publish pre-launch waitlist page, connect real Formspree form | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done (page built); Formspree ID swap pending |
+| 1 | Publish pre-launch waitlist page, connect MailerLite embedded form | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done (page built); MailerLite embed swap pending |
 | 1 | Direct outreach to 10 warm buyers ("first run, want one?") | DM/text | Daniel — now links to the waitlist page instead of an ad-hoc form | Pending |
 | 1 | Behind-the-scenes: "why we're doing this" founder post | Instagram Feed | Trinity, sets authentic tone | Pending |
 | 2 | Order demo run from manufacturer | — | Daniel, depends on manufacturer quote | Pending |
 | 2-4 | Waiting period — teaser content: design sketches, "meet the toys" reveal one design at a time | TikTok + IG Reels | 2-3 short videos, builds anticipation, every caption/bio link drives to the waitlist page | Pending |
-| 2-4 | Email warm-up sequence to waitlist signups (2-3 short emails: "meet the toys," demo run update, "it's almost here") | Email (via Formspree-collected list) | Trinity/Daniel — keeps early signups warm until stock arrives so they convert instead of going cold | Pending |
+| 2-4 | Email warm-up sequence to waitlist signups (2-3 short emails: "meet the toys," demo run update, "it's almost here") | Email (MailerLite automation, triggered on joining the Waitlist group) | Trinity/Daniel — keeps early signups warm until stock arrives so they convert instead of going cold; fits inside MailerLite's free 3-automation limit | Pending |
 | 5 | Demo stock arrives — unboxing video | TikTok + Reels | First "real" hero content | Pending |
 | 5 | Deliver to warm buyers, ask for filmed reactions | TikTok + Reels | UGC — pet's first reaction to toy is the best organic content | Pending |
 | 6 | Compile warm-buyer reaction clips into highlight content | TikTok + Reels + Feed | This is the most likely "breakout" content candidate | Pending |
@@ -75,7 +79,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 | 8 | Review/recap: where things stand, thank warm buyers | Instagram Feed | Builds trust/community for next phase | Pending |
 
 ## 6. Content Pieces Needed
-- **Pre-launch waitlist page** (must-have, built) — `pre-launch.html`, central destination for all social/DM traffic; needs real Formspree form ID connected before launch
+- **Pre-launch waitlist page** (must-have, built) — `pre-launch.html`, central destination for all social/DM traffic; needs a real MailerLite embedded-form code connected before launch
 - **Email warm-up sequence** (must-have) — 2-3 short emails to waitlist signups during weeks 2-4 so early interest doesn't go cold before stock arrives
 - **Unboxing video** (must-have) — first reveal of demo stock
 - **3-5 design reveal teasers** (must-have) — one per toy design, builds anticipation pre-stock
@@ -96,7 +100,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - Waitlist signups via `pre-launch.html`: target 75-100 by week 6 (gives a buffer above the 50 cold-order target, since not every signup converts)
 - Waitlist-to-purchase conversion rate once founding-buyer email goes out in week 7
 
-**Tracking:** Manual tally for pre-sells (small volume); platform-native analytics (TikTok/IG insights) for content performance; UTM-tagged order-form link for cold conversion tracking; Formspree submissions (or connected Google Sheet/Zapier) for waitlist signups.
+**Tracking:** Manual tally for pre-sells (small volume); platform-native analytics (TikTok/IG insights) for content performance; UTM-tagged order-form link for cold conversion tracking; MailerLite subscriber count/group view for waitlist signups (visible and queryable directly in the MailerLite dashboard — no separate export needed).
 **Reporting cadence:** Weekly check-in between Daniel and Trinity during the 8-week window.
 
 ## 8. Budget Allocation ($250 NZD)
@@ -110,7 +114,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - **Risk: warm buyers don't film/share reactions (most valuable content depends on their cooperation).** Mitigation: ask explicitly when delivering toys, make it easy (a 10-second video request, not a production ask), consider a small thank-you incentive for those who do.
 
 ## 10. Next Steps
-1. Replace the placeholder Formspree form ID in `pre-launch.html` with a real one, then test a submission end-to-end before sharing the link anywhere.
+1. Create a free MailerLite account, a "Waitlist" group, and an embedded form; send the embed code so it can replace the Formspree placeholder in `pre-launch.html`, then test a submission end-to-end before sharing the link anywhere.
 2. Confirm manufacturer and get demo run quote/lead time in writing (see manufacturer shortlist).
 3. Lock in the 10 warm pre-sell buyers this week — send them the waitlist page link, not an ad-hoc DM form.
 4. Trinity starts teaser content (design reveals) while demo run is in production; every post/bio links to the waitlist page.

@@ -42,7 +42,7 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 ## 6. Milestones & Timeline
 | Milestone | Target |
 |---|---|
-| Pre-launch waitlist page live (real Formspree form connected) | Week 1 |
+| Pre-launch waitlist page live (real MailerLite form connected) | Week 1 |
 | Recover/finalize designs | Week 1-2 |
 | Manufacturer quotes received | Week 2 |
 | Demo run ordered | Week 2-3 |
@@ -54,7 +54,7 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 
 ## 7. Risks
 - **Design recovery:** if original designs can't be found, Trinity needs time to recreate them — this is the current critical path blocker, ahead of manufacturing.
-- **Waitlist tooling dependency:** the pre-launch page relies on a free Formspree form (no backend). Free-tier submission limits or service downtime could silently lose signups — worth periodically checking the Formspree dashboard, and exporting emails somewhere durable (a spreadsheet) rather than relying on Formspree as the system of record.
+- **Waitlist tooling dependency:** the pre-launch page captures signups via a free MailerLite embedded form. Free-tier caps at 250 subscribers and 2,500 emails/month — fine for the current waitlist/founding-buyer scale, but worth monitoring as the list grows past that. MailerLite's free plan only supports 1 active "digital product/booking" — it is being used purely for email capture and sequencing here, not for taking actual toy orders, since it doesn't fit a physical multi-unit product.
 - **Founding-price margin compression:** the $30 NZD founding-buyer price leaves a thinner margin than the standard $30-45 range if real manufacturing costs land above estimate — see Unit Economics.
 - **Manufacturer reliability:** untested supplier relationship — mitigate by ordering the smallest viable demo batch before committing to a larger production run.
 - **Market validation:** the core bet is that the joke travels on social video. Treat the demo run as the test; if engagement is weak, revisit before investing in a larger production run.
@@ -72,4 +72,4 @@ Detailed in [marketing-campaign-plan.md](marketing-campaign-plan.md). Summary:
 2. Decide which manufacturer to formally request quotes from.
 3. Confirm the 10 warm pre-sell buyers (who, specifically).
 4. Decide on order-taking mechanism for cold launch (simple form vs. Shopify).
-5. Connect a real Formspree form ID to `pre-launch.html` (currently a placeholder) and test a submission before sharing the page anywhere.
+5. Create a free MailerLite account/group/embedded form and send the embed code so it can be connected to `pre-launch.html` (currently a Formspree placeholder); test a submission before sharing the page anywhere.
