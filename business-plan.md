@@ -5,6 +5,8 @@ Terrified Toys is a DTC pet toy brand selling sewn plush animals with comedic te
 
 **Founders:** Daniel (strategy, operations, business development), Trinity (creative lead, design, content, brand voice).
 
+Brand pillars, voice, visual identity, and target personas are detailed in [brand-strategy.md](brand-strategy.md) — that doc is the source of truth for tone/audience; this plan defers to it rather than redefining it.
+
 ## 2. Product
 - Sewn plush toy animals, custom-designed with comedic terror expressions.
 - Retail price: $30–45 NZD.

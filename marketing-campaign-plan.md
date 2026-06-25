@@ -10,13 +10,9 @@
 - Produce one piece of content with genuine organic reach (10x+ normal views) to validate the core joke travels
 
 ## 2. Target Audience
-**Primary segment:** Pet owners aged 20–45 who are active in TikTok/Instagram/Facebook pet communities, buy toys and gifts for their own pets, and have disposable income for impulse pet purchases ($30-45 NZD range).
-- **Pain points:** Pet toys get shredded in minutes; existing toys are generic and uninteresting to buy or gift.
-- **Motivations:** Wants something funny to show off online, not just durable. Cares about the moment of giving/filming the toy as much as the toy's lifespan.
-- **Where they spend time:** TikTok FYP (pet content, comedy), Instagram Reels, Facebook pet breed/community groups.
-- **Buying stage:** Mostly unaware they want this until they see it — this is an impulse/awareness-to-purchase campaign, not a considered-purchase funnel.
+Full persona detail (demographics, psychographic triggers, channel-by-persona, objections) now lives in [brand-strategy.md](brand-strategy.md) — this section is a condensed pointer, not the source of truth.
 
-**Secondary segment:** Gift buyers — people buying for someone else's pet (birthdays, white elephant/Secret Santa, "new puppy" gifts). Same channels, but messaging should lean into "tag someone whose dog needs this."
+**Four personas:** The Petty Partner (gift-for-partner's-dog, relationship banter), The Hunting Lad (working/hunting dog owner, durability-focused), The Dark-Humor Dog-Content Degenerate (TikTok/Reels, impulse-buys off a single video — primary organic discovery engine), The Prank Gifter (white elephant/Secret Santa, doesn't need to own a dog). See [brand-strategy.md](brand-strategy.md) Section 4-5 for the full breakdown and channel-by-persona table.
 
 ## 3. Key Messages
 **Core message:** "It knows what's coming." — the toy's terror is the entire pitch; let the visual/video carry it.
@@ -27,20 +23,19 @@
 3. Perfect impulse gift — for your own pet or someone else's.
 4. Made by two people building this for real, not a faceless drop-shipped brand. (Lean on Trinity's authentic creative voice.)
 
-**Tone by channel:**
-- TikTok/Reels: deadpan comedic — captions play it completely straight ("Day 1 of giving him a toy that knows its fate")
-- Instagram feed/static posts: slightly more polished product-photography tone, still dry humour
-- Facebook pet groups: warmer, more conversational — community-first, less "ad-like"
+**Tone by channel:** see [brand-strategy.md](brand-strategy.md) Section 2 (Brand Personality & Voice) for the full voice guide and do/don't list — this campaign should pull tone from there rather than redefine it here.
 
 ## 4. Channel Strategy
-| Channel | Why | Format | Effort | Budget |
-|---|---|---|---|---|
-| Pre-launch waitlist page | Central conversion point for every other channel — gives social content somewhere to send traffic before there's a Shopify store | Single-page site (`pre-launch.html`), MailerLite-backed name+email form | Low (built) | $0 |
-| TikTok (organic) | Primary discovery engine for this audience; short comedic video is the native format for the joke | Reels-style clips: unboxing, "first encounter," destruction in slow-mo | Medium-High | $0 (time only) |
-| Instagram Reels + Feed | Same content repurposed; feed posts double as product catalog | Reels + carousel product shots | Medium | $0 (time only) |
-| Facebook pet groups | Earned/community — share organically in relevant groups (with permission/no-spam norms) | Native posts, photos/video + caption | Low | $0 |
-| Direct outreach (warm pre-sell) | Fastest, most reliable 10 sales — friends/family with pets | DM/text + a Stripe Payment Link | Low | $0 |
-| Paid social ads | Skip for demo run — budget is $250 and should go to product, not ads, until organic content validates the joke | — | — | $0 for now |
+Persona-specific channel detail (which channel for which persona, and why) now lives in [brand-strategy.md](brand-strategy.md) Section 5. This table covers the channel mechanics; each row links to the landing page that channel's traffic should actually go to — see "Per-Persona Funnels & Landing Pages" below.
+
+| Channel | Why | Format | Links To | Effort | Budget |
+|---|---|---|---|---|---|
+| TikTok (organic) | Primary discovery engine, especially for the Dog-Content persona; short comedic video is the native format for the joke | Reels-style clips: unboxing, "first encounter," destruction in slow-mo | `landing/dog-content.html` | Medium-High | $0 (time only) |
+| Instagram Reels + Feed | Same content repurposed; feed posts double as product catalog | Reels + carousel product shots | `landing/dog-content.html` or `landing/petty-partner.html` depending on the post's angle | Medium | $0 (time only) |
+| Facebook hunting/dog groups | Earned/community, durability-focused angle resonates here | Native posts, photos/video + caption | `landing/hunting-lad.html` | Low | $0 |
+| Instagram/Facebook gift-search content | Targets Prank Gifter and Petty Partner personas around gifting occasions | Gift-angle posts, carousel | `landing/prank-gifter.html` or `landing/petty-partner.html` | Low | $0 |
+| Direct outreach (warm pre-sell) | Fastest, most reliable 10 sales — friends/family with pets, persona usually unknown | DM/text + a Stripe Payment Link | `pre-launch.html` (generic) | Low | $0 |
+| Paid social ads | Skip for demo run — budget is $250 and should go to product, not ads, until organic content validates the joke | — | — | — | $0 for now |
 
 ### Pre-launch page (`pre-launch.html`)
 Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, both current product photos (black poodle/deer, apricot poodle/rabbit) used as hero social proof. Captures name + email via a MailerLite embedded form (switched from Formspree; a Supabase-backed option was scoped but shelved to avoid a paid-plan requirement).
@@ -60,11 +55,21 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 
 **Setup task (Daniel):** create a free MailerLite account, a "Waitlist" subscriber group, and an embedded form, then send the embed code so it can be dropped into `pre-launch.html` in place of the current Formspree placeholder. Until then the form will fail silently to visitors (error state will show).
 
+### Per-Persona Funnels & Landing Pages (built)
+Each persona now gets its own dedicated landing page rather than every channel pointing at the generic `pre-launch.html` — same visual system, persona-specific hero copy and CTA, drawn from [brand-strategy.md](brand-strategy.md):
+- `landing/petty-partner.html` — relationship-banter framing
+- `landing/hunting-lad.html` — durability-forward, dry humor
+- `landing/dog-content.html` — minimal copy, video/visual-first, deadpan
+- `landing/prank-gifter.html` — gifting/white-elephant framing
+
+`pre-launch.html` stays as the generic/default page for warm outreach and any bio link where persona isn't known. Each persona page's MailerLite form tags the signup into a persona-specific group (hidden `persona` field already wired in) so the email warm-up sequence can eventually speak to each persona specifically — same MailerLite embed-code swap-in needed as `pre-launch.html`.
+
 ## 5. Content Calendar (8 weeks: pre-sell → demo arrival → cold launch)
 
 | Week | Content Piece | Channel | Notes | Status |
 |---|---|---|---|---|
 | 1 | Publish pre-launch waitlist page, connect MailerLite embedded form | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done (page built); MailerLite embed swap pending |
+| 1 | Publish 4 persona landing pages (`landing/*.html`), connect MailerLite forms | Web | Daniel — every persona-specific post/ad should link here instead of the generic page | Done (pages built); MailerLite embed swap pending |
 | 1 | Direct outreach to 10 warm buyers ("first run, want one?") | DM/text | Daniel — now links to the waitlist page instead of an ad-hoc form | Pending |
 | 1 | Behind-the-scenes: "why we're doing this" founder post | Instagram Feed | Trinity, sets authentic tone | Pending |
 | 2 | Order demo run from manufacturer | — | Daniel, depends on manufacturer quote | Pending |
@@ -81,7 +86,8 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 | 8 | Review/recap: where things stand, thank warm buyers | Instagram Feed | Builds trust/community for next phase | Pending |
 
 ## 6. Content Pieces Needed
-- **Pre-launch waitlist page** (must-have, built) — `pre-launch.html`, central destination for all social/DM traffic; needs a real MailerLite embedded-form code connected before launch
+- **Pre-launch waitlist page** (must-have, built) — `pre-launch.html`, generic/default destination for traffic where persona isn't known; needs a real MailerLite embedded-form code connected before launch
+- **4 persona landing pages** (must-have, built) — `landing/petty-partner.html`, `landing/hunting-lad.html`, `landing/dog-content.html`, `landing/prank-gifter.html`; each needs the same MailerLite embed-code swap-in as the main page
 - **Email warm-up sequence** (must-have) — 2-3 short emails to waitlist signups during weeks 2-4 so early interest doesn't go cold before stock arrives
 - **Unboxing video** (must-have) — first reveal of demo stock
 - **3-5 design reveal teasers** (must-have) — one per toy design, builds anticipation pre-stock
@@ -116,7 +122,7 @@ Single-file, self-contained waitlist/pre-order page, dark-comedic brand tone, bo
 - **Risk: warm buyers don't film/share reactions (most valuable content depends on their cooperation).** Mitigation: ask explicitly when delivering toys, make it easy (a 10-second video request, not a production ask), consider a small thank-you incentive for those who do.
 
 ## 10. Next Steps
-1. Create a free MailerLite account, a "Waitlist" group, and an embedded form; send the embed code so it can replace the Formspree placeholder in `pre-launch.html`, then test a submission end-to-end before sharing the link anywhere.
+1. Create a free MailerLite account, a "Waitlist" group, and an embedded form; send the embed code so it can replace the Formspree placeholder in `pre-launch.html` and all 4 `landing/*.html` pages, then test a submission end-to-end on each before sharing any link anywhere.
 2. Confirm manufacturer and get demo run quote/lead time in writing (see manufacturer shortlist).
 3. Lock in the 10 warm pre-sell buyers this week — send them the waitlist page link, not an ad-hoc DM form.
 4. Trinity starts teaser content (design reveals) while demo run is in production; every post/bio links to the waitlist page.

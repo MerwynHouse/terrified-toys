@@ -20,19 +20,10 @@ It's a gag gift that's also a genuinely good pet toy. People buy it for the laug
 - Demo run cost: $250 NZD
 
 ## Target Customer
-- Pet owners aged 20–45
-- Buys gifts for their own pets and other people's pets
-- Active on Instagram, TikTok, Facebook pet communities
-- Appreciates dark/absurdist humour
-- Impulse buyer — will purchase on a single scroll if the image/video lands
-- Strong gifting market — birthdays, Christmas, white elephant/Secret Santa
+Four personas, detailed in [brand-strategy.md](../brand-strategy.md): the Petty Partner (gift-for-partner's-dog), the Hunting Lad (working/hunting dog owner), the Dark-Humor Dog-Content Degenerate (TikTok/Reels impulse buyer, primary organic discovery engine), and the Prank Gifter (white elephant/Secret Santa, no dog required). See that doc for channel-by-persona detail.
 
 ## Brand Voice
-- Deadpan. The toy is terrified. We take this very seriously.
-- Dry humour over loud humour
-- Never wink too hard — the joke is funnier when played straight
-- Warm underneath — we love pets, we love the chaos they cause
-- Trinity leads creative — authentic, personal, real
+Sassy, dry, a little naughty — see [brand-strategy.md](../brand-strategy.md) Section 2 for the full pillars, voice/tone guide, do/don't list, and example in-voice copy. Trinity leads creative.
 
 ## Business Model
 - Direct to consumer (Shopify store)
