@@ -4,6 +4,8 @@ Compiled June 2026 for a ~10-unit demo run (3 designs: NZ deer/stag, rabbit, pos
 
 None of these suppliers have confirmed pricing for our specific brief yet — that's what the outreach emails (see `outreach-emails.md`) are for. This doc is the shortlist + what's known/unknown about each, so outreach can be prioritized sensibly.
 
+**Before sending outreach: see [supplier-ip-review.md](supplier-ip-review.md)** for each supplier's stated (or absent) policy on design ownership, confidentiality/NDA, exclusivity, and portfolio/marketing use — this changes the recommended contact order from a pure MOQ/price view.
+
 ## Quick Comparison
 
 | Supplier | Stated MOQ | Fits ~10 units? | Ships NZ/AU? | Pet/Novelty Track Record | Brief-Only (no final files)? | Priority |
