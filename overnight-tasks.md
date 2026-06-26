@@ -25,8 +25,8 @@ Generated: 2026-06-26
 - [x] Add investor-ready executive summary section (problem/solution/traction/business model/ask)
 
 ### 4. Growth plans
-- [ ] growth-plan.md — Year 1 (NZ launch, validate), Year 2 (AU expansion, 3 SKUs), Year 3 (UK/US, licensing, wholesale)
-- [ ] Include revenue targets, unit economics at scale, team needs, funding requirements per stage
+- [x] growth-plan.md — Year 1 (NZ launch, validate), Year 2 (AU expansion, 3 SKUs), Year 3 (UK/US, licensing, wholesale)
+- [x] Include revenue targets, unit economics at scale, team needs, funding requirements per stage (each year explicitly gated on the prior year validating — Year 3 numbers are wide/speculative on purpose, not padded with false precision)
 
 ### 5. Canva marketing copy
 - [ ] canva-copy.md — ready-to-paste copy blocks for Canva designs: product hero, social ads (Facebook/Instagram), stories format, email header, packaging label, and a launch announcement graphic
