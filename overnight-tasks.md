@@ -29,7 +29,7 @@ Generated: 2026-06-26
 - [x] Include revenue targets, unit economics at scale, team needs, funding requirements per stage (each year explicitly gated on the prior year validating — Year 3 numbers are wide/speculative on purpose, not padded with false precision)
 
 ### 5. Canva marketing copy
-- [ ] canva-copy.md — ready-to-paste copy blocks for Canva designs: product hero, social ads (Facebook/Instagram), stories format, email header, packaging label, and a launch announcement graphic
+- [x] canva-copy.md — ready-to-paste copy blocks for Canva designs: product hero, social ads (Facebook/Instagram), stories format, email header, packaging label, and a launch announcement graphic
 
 ### 6. Plushie concept designs
 - [ ] Attempt AI-generated concept visuals for all 3 designs (deer, rabbit, possum) using available image generation tools
