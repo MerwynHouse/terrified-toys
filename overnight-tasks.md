@@ -47,7 +47,7 @@ Generated: 2026-06-26
 - [x] packaging-brief.md — spec for product packaging design: size, materials, what info must appear, tone/style guide, reference examples. **Researched and corrected an assumption:** AS/NZS ISO 8124 (the toy safety standard) is mandatory for children's toys only, NOT pet toys — there is no mandatory pet-toy safety certification in NZ/AU. Flagged voluntary testing as an open decision for Daniel rather than assuming it's required.
 
 ### 10. Wholesale/retail strategy
-- [ ] wholesale-strategy.md — NZ/AU pet stores and gift retailers worth targeting (Animates, Pet World, Whitcoulls, etc.), how to approach them, what a trade price/margin structure looks like, and when to pursue wholesale vs DTC
+- [x] wholesale-strategy.md — NZ/AU pet stores and gift retailers worth targeting (Animates, Pet World, Whitcoulls, etc.), how to approach them, what a trade price/margin structure looks like, and when to pursue wholesale vs DTC. **Researched actual supplier contact pages directly** (Animates supplier-enquiry form, Petbarn's suppliers@petbarn.com.au, The Warehouse's full submission process, Typo/Cotton On's production@ email, Trade Me/Mighty Ape/Catch fee structures). Bottom line: don't pursue wholesale yet — stay DTC until demo run + 50-100 cold sales validate the product, since no manufacturer quote exists yet to set a responsible trade price.
 
 ## Notes
 - Do not skip or half-do tasks — if something needs user input, mark [-] and leave a clear note
