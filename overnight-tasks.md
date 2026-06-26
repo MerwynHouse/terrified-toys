@@ -44,7 +44,7 @@ Generated: 2026-06-26
 - [x] iponz-filing-prep.md — complete the NZ trademark application details for "Terrified Toys". **Correction flagged in the doc:** Class 31 is for animal feed/foodstuffs, not toys — doesn't fit this product. Recommends Class 28 only ("games, toys and playthings") unless pet food/treats are concretely planned soon. Includes applicant details template, goods/services description, step-by-step filing instructions, real fee schedule (~$70-100/class + GST), and realistic ~6-month timeline, all sourced directly from iponz.govt.nz.
 
 ### 9. Packaging brief
-- [ ] packaging-brief.md — spec for product packaging design: size, materials, what info must appear (NZ/AU safety standards, care instructions, brand elements), tone/style guide for packaging copy, and reference examples
+- [x] packaging-brief.md — spec for product packaging design: size, materials, what info must appear, tone/style guide, reference examples. **Researched and corrected an assumption:** AS/NZS ISO 8124 (the toy safety standard) is mandatory for children's toys only, NOT pet toys — there is no mandatory pet-toy safety certification in NZ/AU. Flagged voluntary testing as an open decision for Daniel rather than assuming it's required.
 
 ### 10. Wholesale/retail strategy
 - [ ] wholesale-strategy.md — NZ/AU pet stores and gift retailers worth targeting (Animates, Pet World, Whitcoulls, etc.), how to approach them, what a trade price/margin structure looks like, and when to pursue wholesale vs DTC
