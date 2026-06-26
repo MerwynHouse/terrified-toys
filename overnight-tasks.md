@@ -19,10 +19,10 @@ Generated: 2026-06-26
 - **All 4 are first drafts, not legally reviewed.** Each has `[FILL IN]` markers for business/contact details Daniel needs to supply, and explicit "get a lawyer to review this section" flags on the highest-risk clauses (liability limitation, dispute resolution). Not marking these [-] since the drafting itself needed no user input — only publishing them does.
 
 ### 3. Business plan refresh
-- [ ] Review and update financial projections with current numbers
-- [ ] Add 1-year and 3-year growth scenarios
-- [ ] Update go-to-market timeline to match actual current progress
-- [ ] Add investor-ready executive summary section
+- [x] Review and update financial projections with current numbers (no new real numbers exist — still no manufacturer quote — so this is now explicit illustrative scenarios clearly labeled as such, rather than pretending precision that doesn't exist)
+- [x] Add 1-year and 3-year growth scenarios (conservative/base/optimistic for Year 1; wide illustrative range for Year 3, deferring detail to growth-plan.md)
+- [x] Update go-to-market timeline to match actual current progress (Milestones table now has an Actual Status column — flags that marketing/legal is way ahead of the manufacturing chain, which hasn't moved)
+- [x] Add investor-ready executive summary section (problem/solution/traction/business model/ask)
 
 ### 4. Growth plans
 - [ ] growth-plan.md — Year 1 (NZ launch, validate), Year 2 (AU expansion, 3 SKUs), Year 3 (UK/US, licensing, wholesale)
