@@ -12,10 +12,11 @@ Generated: 2026-06-26
 - [x] Replace all "gore" language across all files
 
 ### 2. Policy documents
-- [ ] privacy-policy.md — GDPR/NZ Privacy Act compliant, for terrified-toys.vercel.app
-- [ ] terms-of-service.md — covers pre-orders, founding buyer offer, NZ consumer law
-- [ ] returns-refund-policy.md — NZ Consumer Guarantees Act compliant
-- [ ] shipping-policy.md — NZ domestic + AU international, expected timelines
+- [x] privacy-policy.md — GDPR/NZ Privacy Act compliant, for terrified-toys.vercel.app (drafted; flags GDPR as not fully applicable given NZ/AU-only audience, with reasoning; several `[FILL IN]` blanks need Daniel's real business/contact details before publishing)
+- [x] terms-of-service.md — covers pre-orders, founding buyer offer, NZ consumer law (drafted; liability/dispute sections explicitly flagged for lawyer review)
+- [x] returns-refund-policy.md — NZ Consumer Guarantees Act compliant (drafted; explicitly distinguishes normal chew-toy destruction from an actual fault, since CGA doesn't cover the former)
+- [x] shipping-policy.md — NZ domestic + AU international, expected timelines (drafted with honest two-stage timeline — production lead time unknown until a manufacturer quote lands, shipping estimates are realistic ranges not guarantees)
+- **All 4 are first drafts, not legally reviewed.** Each has `[FILL IN]` markers for business/contact details Daniel needs to supply, and explicit "get a lawyer to review this section" flags on the highest-risk clauses (liability limitation, dispute resolution). Not marking these [-] since the drafting itself needed no user input — only publishing them does.
 
 ### 3. Business plan refresh
 - [ ] Review and update financial projections with current numbers
