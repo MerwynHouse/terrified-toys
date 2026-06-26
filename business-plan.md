@@ -8,19 +8,22 @@ Terrified Toys is a DTC pet toy brand selling sewn plush animals with comedic te
 Brand pillars, voice, visual identity, and target personas are detailed in [brand-strategy.md](brand-strategy.md) — that doc is the source of truth for tone/audience; this plan defers to it rather than redefining it.
 
 ## 2. Product
-- Sewn plush toy animals, custom-designed with comedic terror expressions.
+- Sewn plush dog chew toys, three canonical designs: **NZ deer (stag), rabbit, possum** — each with a panicked/terrified expression and a red "gore" fabric-fill detail designed to spill out as the dog chews through it.
 - Retail price: $30–45 NZD.
 - Initial run: demo batch, budget $250 NZD, sized to manufacturer minimums (target 10-25 units depending on quote).
-- Designs: previously created but not currently locatable in any connected system (repo, Desktop, email). Action item: Daniel/Trinity to recover or recreate design files before manufacturer quoting can finalize artwork.
+- **Design status: concept/brief finalized, no artwork files exist yet.** The three-design + red-gore spec above is what's being sent to manufacturers as a written brief (see `outreach-emails.md`); this replaces the earlier "recover lost original designs" framing — there's nothing to recover, the spec is new and clear, but actual print-ready artwork still needs to be created (by Trinity or by a manufacturer's design team) before production can start. The two existing reference photos (`images/`) show tone/expression only — no gore detailing yet.
+- **Prior art check complete:** the terrified-expression + gore-detail concept is confirmed original in the commercial dog toy market — no directly competing product found. Reduces (but doesn't eliminate) market-validation risk; see Risks.
+- **Trademark:** "Terrified Toys" confirmed clear on IPONZ (New Zealand trademark register) as of this check — not yet filed. See Open Items.
 
 ## 3. Manufacturing
-No surviving contact with the originally "identified" supplier — treating this as a fresh search. Shortlisted low-MOQ / no-minimum custom plush manufacturers (see outreach plan below):
-- Stuffed Animal Pros (no stated minimum)
-- YourStuffMade (low MOQ, ~$9.99/unit base)
-- Budsies (50 unit minimum, more established)
-- Backup/scale options once past demo stage: Maple Eye Toys (MOQ 100, safety certified), Jianchuang (MOQ 300), Alibaba marketplace suppliers (MOQ 20-100+, cheapest but more vetting required)
+No surviving contact with the originally "identified" supplier from the original plan — this was a fresh search. Full shortlist, comparison, and IP/confidentiality review now live in [suppliers.md](suppliers.md) and [supplier-ip-review.md](supplier-ip-review.md) — 8 manufacturers researched, prioritized by MOQ fit and IP safety, not just price.
 
-**Next step:** request quotes from the top 2-3 once final designs are ready, comparing per-unit cost, MOQ, lead time, and safety certification (EN71/ASTM — relevant if selling beyond NZ).
+**Outreach status:**
+- **Sent (email):** YourStuffMade, Child's Own
+- **Sent (web contact form):** Bespoke Pet Products
+- **Not yet contacted:** Stuffed Animal Pros, Szoneier, Wedogy, EverLighten (lower priority — see `suppliers.md` for why)
+
+**Next step:** track responses (price at 10 vs. 100 units, brief-only feasibility, lead time, gore-detailing experience) back into `suppliers.md` as they land; contact the remaining shortlist if the first three don't yield a workable quote.
 
 ## 4. Unit Economics (demo run estimate)
 Assuming a $250 budget and a 10-unit demo run at ~$25/unit landed cost (placeholder pending real quotes):
@@ -52,7 +55,9 @@ Settled decision (June 2026) on the division of tools, to avoid re-deciding this
 | Milestone | Target |
 |---|---|
 | Pre-launch waitlist page + 4 persona pages live, MailerLite connected via serverless proxy | Week 1 |
-| Recover/finalize designs | Week 1-2 |
+| Trademark search clear on IPONZ | Done |
+| Supplier outreach sent (YourStuffMade, Child's Own, Bespoke Pet Products) | Done |
+| Create design/artwork files (spec finalized: deer, rabbit, possum + red gore detail) | Week 1-2 |
 | Manufacturer quotes received | Week 2 |
 | Demo run ordered | Week 2-3 |
 | Warm pre-sell locked (10 units) | Week 1-2 (parallel) |
@@ -62,7 +67,8 @@ Settled decision (June 2026) on the division of tools, to avoid re-deciding this
 | First sale (cold) | Target: within 90 days of stock arrival |
 
 ## 8. Risks
-- **Design recovery:** if original designs can't be found, Trinity needs time to recreate them — this is the current critical path blocker, ahead of manufacturing.
+- **Design artwork creation:** spec is finalized (deer, rabbit, possum + red gore detail) but no actual artwork files exist yet — this is the current critical path blocker, ahead of manufacturing. Lower risk than "recover lost files" since there's nothing to recover, but Trinity (or a manufacturer's design team) still needs to produce real artwork before quoting can finalize.
+- **Trademark not yet filed:** "Terrified Toys" is confirmed clear on IPONZ, but the clearance is only good until someone else files first — worth filing sooner rather than treating this as fully resolved.
 - **Waitlist tooling dependency:** signups are captured via a serverless function (`api/subscribe.js`) calling MailerLite's API directly — free-tier caps at 250 subscribers and 2,500 emails/month, fine for current scale but worth monitoring as the list grows. MailerLite's free plan only supports 1 active "digital product/booking" — it is being used purely for email capture and sequencing, not for taking actual toy orders, since it doesn't fit a physical multi-unit product.
 - **Founding-price margin compression:** the $30 NZD founding-buyer price leaves a thinner margin than the standard $30-45 range if real manufacturing costs land above estimate — see Unit Economics.
 - **Manufacturer reliability:** untested supplier relationship — mitigate by ordering the smallest viable demo batch before committing to a larger production run.
@@ -77,8 +83,9 @@ Settled decision (June 2026) on the division of tools, to avoid re-deciding this
 - A real manufacturer relationship established for a larger second production run
 
 ## Open Items (need Daniel/Trinity input)
-1. Locate or recreate the original toy designs.
-2. Decide which manufacturer to formally request quotes from.
-3. Confirm the 10 warm pre-sell buyers (who, specifically).
+1. Create actual design/artwork files for the 3 designs (deer, rabbit, possum + red gore detail) — spec is final, files aren't.
+2. Await responses from YourStuffMade, Child's Own, Bespoke Pet Products (outreach sent); decide whether to also contact the remaining shortlist (Stuffed Animal Pros, Szoneier, Wedogy, EverLighten) in parallel or wait.
+3. Confirm the 10 warm pre-sell buyers (who, specifically) and send them `warm-outreach-dms.md` — drafted, not yet sent.
 4. Set up a Stripe Payment Link for order-taking once demo stock is closer to arriving (see Tech Stack & Architecture — decided approach, just not yet built).
-5. ~~Connect MailerLite to the waitlist pages~~ — done. All 5 forms POST to `api/subscribe.js`, which routes signups into per-persona MailerLite groups (Waiting List, Petty Partner, Hunting Lad, Dog Content, Prank Gifter). Remaining manual step: build the actual email warm-up automations inside the MailerLite dashboard (not API-accessible on the free plan) for each group.
+5. ~~Connect MailerLite to the waitlist pages~~ — done. All 5 forms POST to `api/subscribe.js`, which routes signups into per-persona MailerLite groups (Waiting List, Petty Partner, Hunting Lad, Dog Content, Prank Gifter). Remaining manual step: build the actual email warm-up automations inside the MailerLite dashboard (not API-accessible on the free plan) for each group — copy is drafted in `email-sequences.md`.
+6. File the "Terrified Toys" trademark with IPONZ — confirmed clear, not yet filed.

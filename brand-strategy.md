@@ -37,7 +37,16 @@ Every piece of content, copy, or design should trace back to one of these:
 - Caption: "She didn't ask for this. He bought it anyway."
 - Product copy: "Survived approximately 4 minutes."
 
-## 3. Visual Identity
+## 3. Product Designs
+
+Three canonical designs, finalized as a brief (sent to manufacturers — see `outreach-emails.md`), but no artwork files exist yet:
+1. **NZ deer (stag)** — antlers, the "classic" startled-deer look
+2. **Rabbit** — long ears, wide panicked eyes
+3. **Possum** — NZ/AU possum styling
+
+All three share the terrified expression plus a **red "gore" fabric-fill detail** designed to spill out as the dog chews through it — this is now a defining product element alongside the face, not just the face alone. The two reference photos currently used on the live pages (`images/black-poodle-deer.png`, `images/apricot-poodle-rabbit.png`) show tone/expression only — no gore detailing yet, since real artwork hasn't been produced. Update this section and the live pages once real product photography exists.
+
+## 4. Visual Identity
 
 Formalized from what's already live on `pre-launch.html` — this is the locked identity, not a placeholder.
 
@@ -59,7 +68,7 @@ Formalized from what's already live on `pre-launch.html` — this is the locked 
 
 **Logo/lockup (interim standard):** wordmark "Terrified **Toys**" — "Toys" in Terror Red, "Terrified" in Bone, uppercase, bold, tight letter-spacing. No icon/symbol yet; revisit once there's budget for a proper mark.
 
-## 4. Target Personas
+## 5. Target Personas
 
 Two are locked from Daniel's direction, two are proposed and should be validated (or cut) once reviewed.
 
@@ -71,11 +80,11 @@ Two are locked from Daniel's direction, two are proposed and should be validated
 
 ### Proposed (validate before building out)
 
-**The Dark-Humor Dog-Content Degenerate** — heavy TikTok/Reels user embedded in dog-meme and destruction-compilation content. Shares for the bit, buys impulsively off a single video, may not have planned to buy anything. Skews younger, 20-32. Trigger: a single piece of content landing on their feed — pure impulse, near-zero consideration time. Found via: TikTok FYP, Reels. This is the persona most likely to produce the "one breakout video" goal already in the campaign plan — highest viral upside, lower guaranteed spend per person.
+**The Dark-Humor Dog-Content Degenerate** *(MailerLite group: "Dog Content")* — heavy TikTok/Reels user embedded in dog-meme and destruction-compilation content. Shares for the bit, buys impulsively off a single video, may not have planned to buy anything. Skews younger, 20-32. Trigger: a single piece of content landing on their feed — pure impulse, near-zero consideration time. Found via: TikTok FYP, Reels. This is the persona most likely to produce the "one breakout video" goal already in the campaign plan — highest viral upside, lower guaranteed spend per person.
 
 **The Prank Gifter** — buys for white elephant, Secret Santa, or group gift exchanges. Doesn't need to own a dog at all — buying for someone else's, or for the joke itself. Motivated by "funniest gift in the group" status. Seasonal spikes: Christmas, white elephant season, "new puppy" gifting. Found via: Instagram/Facebook gift-search intent ("funny gift for dog owner"). Objection to pre-empt: needs the gifting angle to be obvious and fast to grasp from a single image/caption, since this buyer isn't browsing the dog-product category by default.
 
-## 5. Channel Strategy by Persona
+## 6. Channel Strategy by Persona
 
 | Persona | Primary Channel(s) | Content Angle/Format | CTA Tone | Timing Notes |
 |---|---|---|---|---|
@@ -84,11 +93,11 @@ Two are locked from Daniel's direction, two are proposed and should be validated
 | The Dark-Humor Dog-Content Degenerate | TikTok, Instagram Reels | Pure destruction/reaction video, no explanation, caption plays it straight | Deadpan, minimal copy, let the video carry it | Always-on; this is the organic discovery engine |
 | The Prank Gifter | Instagram, Facebook (gift-search intent) | Gifting-first framing, fast visual read, "funniest gift in the group" | Punchy, gift-occasion specific | Strong seasonal spikes: Christmas, white elephant season |
 
-## 6. Relationship to Other Docs
+## 7. Relationship to Other Docs
 
 `marketing-campaign-plan.md` and `business-plan.md` should link here for tone/voice/audience rather than redefine it. Tactical execution (content calendar, KPIs, budget) stays in `marketing-campaign-plan.md`; this doc is the "who we are and who we're talking to" layer underneath it.
 
-## 7. Per-Persona Funnels & Landing Pages
+## 8. Per-Persona Funnels & Landing Pages
 
 Each persona gets a dedicated landing page rather than all channels pointing at one generic page:
 

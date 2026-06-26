@@ -21,7 +21,9 @@ Full persona detail (demographics, psychographic triggers, channel-by-persona, o
 1. The joke is in the toy's face, not in copy — show, don't explain.
 2. It's a genuinely good, durable plush — not just a gag. ("Your dog will still wreck it. That's the point.")
 3. Perfect impulse gift — for your own pet or someone else's.
-4. Made by two people building this for real, not a faceless drop-shipped brand. (Lean on Trinity's authentic creative voice.)
+4. Let the dogs sell it — real pet reactions and UGC carry the proof, not a founder-origin story (see `brand-strategy.md` pillar 3, "Let The Dogs Sell It"). Founder/BTS content is a supporting footnote, not the lead message.
+
+**Product note:** three canonical designs exist as a finalized brief — NZ deer, rabbit, possum, each with a red "gore" fabric detail in addition to the terrified expression (see `outreach-emails.md` for the full spec sent to manufacturers). No artwork files exist yet, so all current live content still uses the two existing reference photos (deer, rabbit — no gore detail visible). Update this section once real product photography exists.
 
 **Tone by channel:** see [brand-strategy.md](brand-strategy.md) Section 2 (Brand Personality & Voice) for the full voice guide and do/don't list — this campaign should pull tone from there rather than redefine it here.
 
@@ -70,28 +72,29 @@ Each persona now gets its own dedicated landing page rather than every channel p
 |---|---|---|---|---|
 | 1 | Publish pre-launch waitlist page, connect to MailerLite | Web (`pre-launch.html`) | Daniel — must happen before any traffic-driving content goes out | Done — live and tested |
 | 1 | Publish 4 persona landing pages (`landing/*.html`), connect to MailerLite | Web | Daniel — every persona-specific post/ad should link here instead of the generic page | Done — live and tested |
-| 1 | Direct outreach to 10 warm buyers ("first run, want one?") | DM/text | Daniel — now links to the waitlist page instead of an ad-hoc form | Pending |
-| 1 | Behind-the-scenes: "why we're doing this" founder post | Instagram Feed | Trinity, sets authentic tone | Pending |
+| 1 | Direct outreach to 10 warm buyers ("first run, want one?") | DM/text | Daniel — now links to the waitlist page instead of an ad-hoc form | Drafted (`warm-outreach-dms.md`), not yet sent |
+| 1 | First founder post using the two existing reference photos | Instagram Feed | Trinity — 3 caption options drafted | Drafted (`instagram-posts.md`), not yet posted |
 | 2 | Order demo run from manufacturer | — | Daniel, depends on manufacturer quote | Pending |
 | 2-4 | Waiting period — teaser content: design sketches, "meet the toys" reveal one design at a time | TikTok + IG Reels | 2-3 short videos, builds anticipation, every caption/bio link drives to the waitlist page | Pending |
-| 2-4 | Email warm-up sequence to waitlist signups (2-3 short emails: "meet the toys," demo run update, "it's almost here") | Email (MailerLite automation, triggered on joining the Waitlist group) | Trinity/Daniel — keeps early signups warm until stock arrives so they convert instead of going cold; fits inside MailerLite's free 3-automation limit | Pending |
+| 2-4 | Email warm-up sequence to waitlist signups (welcome + mid-sequence warm-up, per persona group) | Email (MailerLite automation, triggered on joining each group) | Trinity/Daniel — keeps early signups warm until stock arrives so they convert instead of going cold; fits inside MailerLite's free 3-automation limit | Copy drafted (`email-sequences.md`, all 5 groups); automations not yet built in MailerLite dashboard |
 | 5 | Demo stock arrives — unboxing video | TikTok + Reels | First "real" hero content | Pending |
 | 5 | Deliver to warm buyers, ask for filmed reactions | TikTok + Reels | UGC — pet's first reaction to toy is the best organic content | Pending |
 | 6 | Compile warm-buyer reaction clips into highlight content | TikTok + Reels + Feed | This is the most likely "breakout" content candidate | Pending |
 | 6 | Share in 2-3 relevant Facebook pet groups | Facebook | Low effort, direct | Pending |
 | 7 | "Destruction" content — toy meets its fate, in slow motion | TikTok + Reels | Leans fully into the joke/premise | Pending |
 | 7 | Open cold-audience ordering (Stripe Payment Link) | All channels | CTA push begins; waitlist gets first/early access before this goes wide | Pending |
-| 7 | Founding-buyer email to waitlist: early access + discount window before public launch | Email | Converts warm waitlist before cold-audience push starts | Pending |
+| 7 | Founding-buyer email to waitlist: early access + discount window before public launch | Email | Converts warm waitlist before cold-audience push starts | Copy drafted (`email-sequences.md`, all 5 groups); not yet sent (waiting on stock) |
 | 8 | Gift-angle content: "tag someone whose dog needs this" | TikTok + Reels + Facebook | Targets secondary audience (gift buyers) | Pending |
 | 8 | Review/recap: where things stand, thank warm buyers | Instagram Feed | Builds trust/community for next phase | Pending |
 
 ## 6. Content Pieces Needed
 - **Pre-launch waitlist page** (must-have, built and live) — `pre-launch.html`, generic/default destination for traffic where persona isn't known; MailerLite connection tested end-to-end
 - **4 persona landing pages** (must-have, built and live) — `landing/petty-partner.html`, `landing/hunting-lad.html`, `landing/dog-content.html`, `landing/prank-gifter.html`; each routes into its own MailerLite group via `api/subscribe.js`
-- **Email warm-up sequence** (must-have) — 2-3 short emails to waitlist signups during weeks 2-4 so early interest doesn't go cold before stock arrives
+- **Email warm-up sequence** (must-have, drafted) — `email-sequences.md` — welcome, mid-sequence warm-up, and founding-buyer conversion copy for all 5 groups; needs to be built as MailerLite automations
+- **Warm-buyer outreach DMs** (must-have, drafted) — `warm-outreach-dms.md` — short text + longer Instagram DM versions; not yet sent
+- **First founder post captions** (must-have, drafted) — `instagram-posts.md` — 3 options using the two existing reference photos; not yet posted
 - **Unboxing video** (must-have) — first reveal of demo stock
-- **3-5 design reveal teasers** (must-have) — one per toy design, builds anticipation pre-stock
-- **Founder/BTS post** (must-have) — Trinity's voice, why this brand exists
+- **3-5 design reveal teasers** (must-have) — one per toy design, builds anticipation pre-stock; blocked on real artwork/product photos existing (see Product note above)
 - **Pet reaction UGC compilation** (must-have) — highest-value asset, likely breakout candidate
 - **"Destruction" slow-mo video** (must-have) — most directly sells the core joke
 - **Gift-angle post** (nice-to-have) — targets secondary audience, can reuse existing footage
@@ -123,8 +126,8 @@ Each persona now gets its own dedicated landing page rather than every channel p
 
 ## 10. Next Steps
 1. ~~Connect MailerLite to all 5 pages~~ — done. `api/subscribe.js` routes each page's signups into the right persona group; tested end-to-end. Remaining: build the email warm-up automations inside the MailerLite dashboard for each group (automations are UI-only on the free plan).
-2. Confirm manufacturer and get demo run quote/lead time in writing (see manufacturer shortlist).
-3. Lock in the 10 warm pre-sell buyers this week — send them the waitlist page link, not an ad-hoc DM form.
-4. Trinity starts teaser content (design reveals) while demo run is in production; every post/bio links to the waitlist page.
-5. Draft the 2-3 email warm-up sequence for waitlist signups (weeks 2-4).
+2. Awaiting manufacturer responses (outreach already sent to YourStuffMade, Child's Own, Bespoke Pet Products — see `suppliers.md`); get a demo run quote/lead time in writing once one comes back.
+3. Send `warm-outreach-dms.md` to the 10 warm pre-sell buyers — drafted, not yet sent.
+4. Post the first founder content using `instagram-posts.md`; Trinity continues teaser content (design reveals) once real artwork exists.
+5. ~~Draft the email warm-up sequence~~ — done, see `email-sequences.md`. Remaining: build as MailerLite automations.
 6. Set up a Stripe Payment Link for order-taking ahead of cold launch — no database needed at this scale (on hold until demo stock is closer to arriving).

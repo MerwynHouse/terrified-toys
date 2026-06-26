@@ -2,6 +2,8 @@
 
 One template, personalized per supplier using the notes below. No design files exist yet — this is a written brief + reference photo description, intentionally written so a supplier can quote without final artwork.
 
+**Status:** sent to YourStuffMade and Child's Own by email; Bespoke Pet Products was contacted via their website form instead (consider following up with this email template directly if their form response lacks detail). Budsies, Stuffed Animal Pros, Szoneier, Wedogy, and EverLighten not yet contacted — see `suppliers.md` for current priority order.
+
 ## Master Template
 
 **Subject:** Custom plush dog toy quote request — small demo run (10 units, 3 designs)

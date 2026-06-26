@@ -13,10 +13,10 @@ Pet toys get destroyed. That's not a bug, it's the feature. Terrified Toys leans
 It's a gag gift that's also a genuinely good pet toy. People buy it for the laugh. They buy it again because their pet loved it.
 
 ## Products
-- Sewn plush toy animals
-- Comedic terror expressions — the defining feature
-- Price point: $30–45 NZD
-- Manufactured via dropship sewn plush supplier (already identified)
+- Sewn plush dog chew toys, three canonical designs: NZ deer (stag), rabbit, possum
+- Comedic terror expression + a red "gore" fabric-fill detail that spills out as the dog chews through it — both together are the defining feature now, not the face alone
+- Price point: $30–45 NZD ($30 founding-buyer / $40 list for the demo run)
+- Design spec is finalized; no artwork files exist yet. Manufacturer not yet finalized — outreach sent to YourStuffMade, Child's Own, and Bespoke Pet Products; see [suppliers.md](../suppliers.md) and [supplier-ip-review.md](../supplier-ip-review.md)
 - Demo run cost: $250 NZD
 
 ## Target Customer
@@ -26,9 +26,9 @@ Four personas, detailed in [brand-strategy.md](../brand-strategy.md): the Petty 
 Sassy, dry, a little naughty — see [brand-strategy.md](../brand-strategy.md) Section 2 for the full pillars, voice/tone guide, do/don't list, and example in-voice copy. Trinity leads creative.
 
 ## Business Model
-- Direct to consumer (Shopify store)
+- Direct to consumer — pre-launch waitlist page live at [terrified-toys.vercel.app](https://terrified-toys.vercel.app); order-taking via a Stripe Payment Link once stock arrives, not a Shopify store (Shopify deferred until well past demo validation — see `business-plan.md` Tech Stack & Architecture)
 - Social-first — TikTok and Instagram Reels are primary acquisition channels
-- Pre-sell first run to 10 warm buyers (friends/family with pets)
+- Pre-sell first run to 10 warm buyers (friends/family with pets) — outreach drafted in `warm-outreach-dms.md`, not yet sent
 - Potential wholesale to pet boutiques later
 
 ## Founders
@@ -36,7 +36,7 @@ Sassy, dry, a little naughty — see [brand-strategy.md](../brand-strategy.md) S
 - Trinity — creative lead, design, content, brand voice
 
 ## Stage
-Pre-launch. Designs exist. Manufacturer identified. Demo run ($250) is the next step.
+Pre-launch. Pre-launch page + 4 persona landing pages live and connected to MailerLite. Design spec finalized (deer, rabbit, possum + red gore detail) but no artwork files exist yet; manufacturer outreach sent, no quotes back yet. "Terrified Toys" trademark confirmed clear on IPONZ, not yet filed.
 Goal: first sale within 90 days.
 
 ## What Success Looks Like (Year 1)
