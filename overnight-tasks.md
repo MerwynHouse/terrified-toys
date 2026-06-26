@@ -32,9 +32,10 @@ Generated: 2026-06-26
 - [x] canva-copy.md — ready-to-paste copy blocks for Canva designs: product hero, social ads (Facebook/Instagram), stories format, email header, packaging label, and a launch announcement graphic
 
 ### 6. Plushie concept designs
-- [ ] Attempt AI-generated concept visuals for all 3 designs (deer, rabbit, possum) using available image generation tools
-- [ ] Save outputs to images/ folder and push to GitHub
-- [ ] Note: if generation quality is insufficient for manufacturer briefing, flag for Trinity to refine
+- [-] Attempt AI-generated concept visuals for all 3 designs (deer, rabbit, possum) using available image generation tools
+- [-] Save outputs to images/ folder and push to GitHub
+- **Skipped — no suitable tool available.** Checked the Canva MCP (`generate-design`/`generate-design-structured`): it composes template-based graphic layouts (posters, social posts, presentations) from existing stock photo assets — it cannot generate a novel sculpted creature concept (a deer/rabbit/possum plush with a specific terrified facial expression and a red internal-stuffing detail). Checked the visualize tool: it only renders SVG/HTML diagrams and UI mockups, not photorealistic product concepts. No DALL-E/Imagen/Stable Diffusion-style image generator is connected in this environment.
+- **What's actually needed:** either (a) connect an actual AI image-generation tool/MCP to this environment, or (b) Trinity sketches/commissions concept art directly (e.g. using Midjourney, DALL-E, or a freelance illustrator) using the written brief already in `outreach-emails.md` as the spec — three designs, terrified expression, red internal stuffing detail. The brief is ready to hand to whoever does this; it just can't be generated from inside this session.
 
 ### 7. Investor one-pager
 - [ ] investor-one-pager.md — single page covering: problem, solution, traction (waitlist, pre-launch page live), market size, business model, ask, team
