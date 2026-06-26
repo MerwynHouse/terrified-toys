@@ -28,6 +28,7 @@ Every piece of content, copy, or design should trace back to one of these:
 - Don't soften copy to avoid mildly offending someone — a few raised eyebrows is the tone working as intended.
 - Don't lead with founder/origin-story copy — UGC and product-in-action come first.
 - Don't use exclamation-point enthusiasm or generic DTC-brand cheerfulness ("We're SO excited!!").
+- **Don't brand the red internal stuffing as "gore," "blood," or a kill/death effect.** It's red fluff that shows through torn seams — a small colour-contrast comedic detail, not a horror feature. The terrified facial expression is the hook; the red stuffing is a minor follow-up beat, never the headline.
 
 **Example lines (in-voice):**
 - CTA: "Reserve Mine — My Dog Doesn't Need To Know Yet"
@@ -44,7 +45,9 @@ Three canonical designs, finalized as a brief (sent to manufacturers — see `ou
 2. **Rabbit** — long ears, wide panicked eyes
 3. **Possum** — NZ/AU possum styling
 
-All three share the terrified expression plus a **red "gore" fabric-fill detail** designed to spill out as the dog chews through it — this is now a defining product element alongside the face, not just the face alone. The two reference photos currently used on the live pages (`images/black-poodle-deer.png`, `images/apricot-poodle-rabbit.png`) show tone/expression only — no gore detailing yet, since real artwork hasn't been produced. Update this section and the live pages once real product photography exists.
+**The terrified facial expression is the main hook on every design** — wide eyes, raised brows, mouth open mid-scream. Each toy also has red internal stuffing, so when the dog chews through the seams, red fluff shows through underneath — a small, secondary comedic detail. **This is not marketed as a "gore" product**: no blood, no graphic framing, nothing that reads as actually disturbing. It's a colour-contrast detail (red fluff peeking through), not a horror effect — the face does the comedic work, the red stuffing is just a fun "oh, there it is" follow-up beat.
+
+The two reference photos currently used on the live pages (`images/black-poodle-deer.png`, `images/apricot-poodle-rabbit.png`) show the expression/tone only — the red stuffing detail isn't visible yet, since real artwork hasn't been produced. Update this section and the live pages once real product photography exists.
 
 ## 4. Visual Identity
 

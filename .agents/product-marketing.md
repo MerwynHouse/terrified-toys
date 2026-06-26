@@ -14,7 +14,7 @@ It's a gag gift that's also a genuinely good pet toy. People buy it for the laug
 
 ## Products
 - Sewn plush dog chew toys, three canonical designs: NZ deer (stag), rabbit, possum
-- Comedic terror expression + a red "gore" fabric-fill detail that spills out as the dog chews through it — both together are the defining feature now, not the face alone
+- Comedic terror expression is the main hook; each toy also has a secondary red internal-stuffing detail that shows through when chewed. Not marketed as "gore" — it's a colour-contrast comedic detail, not a graphic/horror feature (see `brand-strategy.md` Section 2)
 - Price point: $30–45 NZD ($30 founding-buyer / $40 list for the demo run)
 - Design spec is finalized; no artwork files exist yet. Manufacturer not yet finalized — outreach sent to YourStuffMade, Child's Own, and Bespoke Pet Products; see [suppliers.md](../suppliers.md) and [supplier-ip-review.md](../supplier-ip-review.md)
 - Demo run cost: $250 NZD
@@ -36,7 +36,7 @@ Sassy, dry, a little naughty — see [brand-strategy.md](../brand-strategy.md) S
 - Trinity — creative lead, design, content, brand voice
 
 ## Stage
-Pre-launch. Pre-launch page + 4 persona landing pages live and connected to MailerLite. Design spec finalized (deer, rabbit, possum + red gore detail) but no artwork files exist yet; manufacturer outreach sent, no quotes back yet. "Terrified Toys" trademark confirmed clear on IPONZ, not yet filed.
+Pre-launch. Pre-launch page + 4 persona landing pages live and connected to MailerLite. Design spec finalized (deer, rabbit, possum, terrified expression + red internal stuffing detail) but no artwork files exist yet; manufacturer outreach sent, no quotes back yet. "Terrified Toys" trademark confirmed clear on IPONZ, not yet filed.
 Goal: first sale within 90 days.
 
 ## What Success Looks Like (Year 1)

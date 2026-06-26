@@ -23,7 +23,7 @@ Full persona detail (demographics, psychographic triggers, channel-by-persona, o
 3. Perfect impulse gift — for your own pet or someone else's.
 4. Let the dogs sell it — real pet reactions and UGC carry the proof, not a founder-origin story (see `brand-strategy.md` pillar 3, "Let The Dogs Sell It"). Founder/BTS content is a supporting footnote, not the lead message.
 
-**Product note:** three canonical designs exist as a finalized brief — NZ deer, rabbit, possum, each with a red "gore" fabric detail in addition to the terrified expression (see `outreach-emails.md` for the full spec sent to manufacturers). No artwork files exist yet, so all current live content still uses the two existing reference photos (deer, rabbit — no gore detail visible). Update this section once real product photography exists.
+**Product note:** three canonical designs exist as a finalized brief — NZ deer, rabbit, possum. The terrified facial expression is the main hook on every design; each toy also has a secondary red internal-stuffing detail that shows through when chewed (not branded as "gore" — see `brand-strategy.md` Section 2 do/don't list). See `outreach-emails.md` for the full spec sent to manufacturers. No artwork files exist yet, so all current live content still uses the two existing reference photos (deer, rabbit — red stuffing detail not visible). Update this section once real product photography exists.
 
 **Tone by channel:** see [brand-strategy.md](brand-strategy.md) Section 2 (Brand Personality & Voice) for the full voice guide and do/don't list — this campaign should pull tone from there rather than redefine it here.
 

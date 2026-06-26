@@ -12,22 +12,22 @@ One template, personalized per supplier using the notes below. No design files e
 >
 > I'm Daniel, co-founder of Terrified Toys — a new pet toy brand launching out of New Zealand. I'd like to request a quote for a small demo/sample run before we commit to a larger order, and I'm hoping to work from a written brief and reference photos rather than final design files, since we're still pre-production.
 >
-> **Product concept:** Dog chew toys styled as terrified wild animals. Each toy's face is designed with a panicked, horror-movie expression — wide eyes, raised brows, mouth open mid-scream — because the toy "knows" it's about to be destroyed by the dog. Each toy also includes red "gore" detailing: red fabric stuffing/fill designed to spill out as the dog chews through it, simulating a (comedic, not graphic) kill. It's dark humour aimed at dog owners who'll find it funny rather than disturbing — think novelty/gag-gift plush that's also a genuinely good chew toy, not a horror prop.
+> **Product concept:** Dog chew toys styled as terrified wild animals. Each toy's face is the main hook — a panicked, wide-eyed expression (raised brows, mouth open mid-scream) because the toy "knows" it's about to be destroyed by the dog. Each toy also has red internal stuffing/fluff, so when the dog chews through the seams, the red fluff shows through underneath — a small, comedic visual detail, not a graphic or bloody effect. It's dark humour aimed at dog owners who'll find it funny rather than disturbing — think novelty/gag-gift plush that's also a genuinely good chew toy, not a horror prop.
 >
-> **Three designs, all with the same terrified expression + red gore detail:**
+> **Three designs, all with the same terrified expression + red internal stuffing detail:**
 > 1. New Zealand deer (stag) — antlers, the "classic" startled-deer look
 > 2. Rabbit — long ears, wide panicked eyes
 > 3. Possum — NZ/AU possum styling
 >
 > **Target run:** Approximately 10 units total for this first demo/sample batch — happy to split across the three designs however works best for your minimums, or run all 10 as a single design if that's more efficient for you. Budget for this demo run is tight (sub-$500 NZD all-in), so I want to understand real costs before committing to anything larger.
 >
-> We do have reference photos showing the concept (terrified expression + red gore styling) that I'm happy to share — we just don't have finalized vector/print-ready design files yet.
+> We do have reference photos showing the concept (terrified expression) that I'm happy to share — we just don't have finalized vector/print-ready design files yet, and the photos don't show the red internal stuffing detail.
 >
 > A few specific questions so I can compare options:
 > 1. **Pricing:** What would unit price look like at 10 units, and separately at 100 units (for context on a future production run)?
 > 2. **Working from a brief:** Can you quote and produce a sample from a written brief + reference photos, without finalized design files? If not, what exactly would you need from us first?
 > 3. **Lead time:** What's the realistic lead time for a sample/demo run of this size, from brief approval to shipped product?
-> 4. **Gore/destruction detailing experience:** Have you made products before with "gore" or destruction-style detailing (e.g. red fill/stuffing designed to show through torn seams), or anything comparable in the novelty/gag-gift space? Any examples would help us gauge fit.
+> 4. **Red-stuffing/destruction detailing experience:** Have you made products before with a contrasting-colour internal stuffing designed to show through torn/chewed seams (a colour-contrast detail, not a graphic effect), or anything comparable in the novelty/gag-gift space? Any examples would help us gauge fit.
 >
 > We're based in New Zealand and would need shipping to NZ (and likely Australia for a second run) — happy to hear how that works on your end too.
 >
@@ -52,6 +52,6 @@ Adjust the opening line and reference their own stated policy back at them — i
 
 ## Sending Checklist
 - [ ] Swap in real contact name where findable (otherwise "team"/"there" is fine)
-- [ ] Attach/link the two reference photos already in `images/` (black-poodle-deer.png, apricot-poodle-rabbit.png) — note in the email that these show tone/expression, not the final gore detailing, since the current photos don't show the red gore element yet
+- [ ] Attach/link the two reference photos already in `images/` (black-poodle-deer.png, apricot-poodle-rabbit.png) — note in the email that these show tone/expression only, since the current photos don't show the red internal stuffing detail yet
 - [ ] Use a dedicated reply-to (the new Terrified Toys Gmail account) rather than a personal email
-- [ ] Track responses (price, MOQ flexibility, lead time, gore experience, NZ/AU shipping) back into `suppliers.md` as they come in
+- [ ] Track responses (price, MOQ flexibility, lead time, red-stuffing/destruction-detailing experience, NZ/AU shipping) back into `suppliers.md` as they come in
