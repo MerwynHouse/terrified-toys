@@ -38,7 +38,7 @@ Generated: 2026-06-26
 - **What's actually needed:** either (a) connect an actual AI image-generation tool/MCP to this environment, or (b) Trinity sketches/commissions concept art directly (e.g. using Midjourney, DALL-E, or a freelance illustrator) using the written brief already in `outreach-emails.md` as the spec — three designs, terrified expression, red internal stuffing detail. The brief is ready to hand to whoever does this; it just can't be generated from inside this session.
 
 ### 7. Investor one-pager
-- [ ] investor-one-pager.md — single page covering: problem, solution, traction (waitlist, pre-launch page live), market size, business model, ask, team
+- [x] investor-one-pager.md — single page covering: problem, solution, traction (waitlist, pre-launch page live), market size, business model, ask, team (market size researched/sourced: NZ ~830k dogs, AU durable dog toy market AUD 280-340M; explicitly states no funding round is open and traction is pre-revenue)
 
 ### 8. IPONZ filing prep
 - [ ] iponz-filing-prep.md — complete the NZ trademark application details for "Terrified Toys", Class 28 and 31. Include: applicant details template, goods/services description, filing instructions step by step, estimated cost, what to expect timeline
