@@ -41,7 +41,7 @@ Generated: 2026-06-26
 - [x] investor-one-pager.md — single page covering: problem, solution, traction (waitlist, pre-launch page live), market size, business model, ask, team (market size researched/sourced: NZ ~830k dogs, AU durable dog toy market AUD 280-340M; explicitly states no funding round is open and traction is pre-revenue)
 
 ### 8. IPONZ filing prep
-- [ ] iponz-filing-prep.md — complete the NZ trademark application details for "Terrified Toys", Class 28 and 31. Include: applicant details template, goods/services description, filing instructions step by step, estimated cost, what to expect timeline
+- [x] iponz-filing-prep.md — complete the NZ trademark application details for "Terrified Toys". **Correction flagged in the doc:** Class 31 is for animal feed/foodstuffs, not toys — doesn't fit this product. Recommends Class 28 only ("games, toys and playthings") unless pet food/treats are concretely planned soon. Includes applicant details template, goods/services description, step-by-step filing instructions, real fee schedule (~$70-100/class + GST), and realistic ~6-month timeline, all sourced directly from iponz.govt.nz.
 
 ### 9. Packaging brief
 - [ ] packaging-brief.md — spec for product packaging design: size, materials, what info must appear (NZ/AU safety standards, care instructions, brand elements), tone/style guide for packaging copy, and reference examples
