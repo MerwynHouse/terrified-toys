@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Deer — Terrified Toys</title>
+<meta name="description" content="Meet the deer. Introduced for sport. Now the sport is different.">
+<style>
+  :root{
+    --bg: #0d0d0e;
+    --bg-soft: #161616;
+    --bg-card: #1a1a1a;
+    --red: #e8392f;
+    --red-dark: #b9261d;
+    --cream: #f4ead8;
+    --grey: #9a9a9a;
+    --amber: #b87333;
+    --amber-dim: rgba(184,115,51,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:var(--red);}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .wrap-narrow{max-width:740px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;
+    max-width:1100px;margin:0 auto;
+  }
+  .logo{
+    font-weight:800;letter-spacing:0.5px;font-size:1.1rem;
+    text-transform:uppercase;text-decoration:none;color:var(--cream);
+  }
+  .logo span{color:var(--red);}
+  .nav-links{display:flex;align-items:center;gap:24px;}
+  .nav-links a{
+    color:var(--grey);font-size:0.85rem;text-decoration:none;
+    transition:color 0.2s;
+  }
+  .nav-links a:hover{color:var(--cream);}
+  .nav-links a.active{color:var(--cream);}
+  .nav-cta{
+    border:1px solid var(--red);
+    color:var(--cream) !important;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:0.85rem;
+    text-decoration:none;
+    font-weight:600;
+    transition:background 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--red);}
+
+  /* HERO */
+  header.hero{
+    padding:60px 24px 80px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at top, rgba(184,115,51,0.1), transparent 60%),
+      var(--bg);
+    border-bottom:1px solid #1e1e1e;
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--amber);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:0.75rem;
+    font-weight:700;
+    margin-bottom:18px;
+    border:1px solid rgba(184,115,51,0.5);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(2.6rem,6vw,4.5rem);
+    line-height:1.0;
+    margin:0 0 18px;
+    font-weight:800;
+    letter-spacing:-1px;
+  }
+  .hero-sub{
+    max-width:560px;margin:0 auto;
+    color:var(--grey);
+    font-size:1.1rem;
+  }
+
+  /* CARTOON STRIP */
+  .strip-section{
+    padding:70px 24px;
+    background:var(--bg-soft);
+    border-bottom:1px solid #1e1e1e;
+  }
+  .strip-label{
+    text-align:center;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--grey);
+    margin-bottom:32px;
+    font-weight:700;
+  }
+  .comic-strip{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    max-width:900px;
+    margin:0 auto;
+    border:1px solid #2a2a2a;
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .panel{
+    background:var(--bg-card);
+    padding:28px 20px 24px;
+    text-align:center;
+    border-right:1px solid #2a2a2a;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .panel:last-child{border-right:none;}
+  .panel-num{
+    position:absolute;
+    top:10px;left:14px;
+    font-size:0.65rem;
+    font-weight:700;
+    color:#333;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .panel-art{
+    width:90px;height:90px;
+    border-radius:50%;
+    background:var(--bg-soft);
+    border:2px solid #2a2a2a;
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.4rem;
+    margin:0 auto 16px;
+  }
+  .panel-title{
+    font-size:0.8rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 8px;
+    color:var(--cream);
+  }
+  .panel-caption{
+    font-size:0.78rem;
+    color:var(--grey);
+    line-height:1.4;
+    margin:0;
+    font-style:italic;
+  }
+  .strip-note{
+    text-align:center;
+    margin-top:18px;
+    font-size:0.75rem;
+    color:#444;
+    font-style:italic;
+  }
+
+  /* CONSERVATION SECTION */
+  .conservation{padding:80px 24px;}
+  .conservation h2{
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    font-weight:800;
+    margin:0 0 8px;
+  }
+  .conservation .section-eyebrow{
+    display:inline-block;
+    font-size:0.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--amber);
+    border:1px solid rgba(184,115,51,0.4);
+    padding:4px 12px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .conservation p{
+    color:var(--grey);
+    font-size:1rem;
+    line-height:1.8;
+    margin:0 0 20px;
+  }
+  .conservation p strong{color:var(--cream);}
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin:36px 0;
+  }
+  .stat-card{
+    background:var(--bg-soft);
+    border:1px solid #232323;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+  }
+  .stat-card .stat-num{
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--red);
+    display:block;
+    margin-bottom:4px;
+  }
+  .stat-card .stat-label{
+    font-size:0.8rem;
+    color:var(--grey);
+    line-height:1.3;
+  }
+
+  /* CERTIFIED BADGE SECTION */
+  .cert-section{
+    padding:60px 24px;
+    background:var(--bg-soft);
+    border-top:1px solid #1e1e1e;
+    border-bottom:1px solid #1e1e1e;
+    text-align:center;
+  }
+  .cert-tag{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-size:0.8rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding:10px 22px;
+    border-radius:4px;
+    margin-bottom:24px;
+    transform:rotate(-2deg);
+    box-shadow:0 8px 24px rgba(232,57,47,0.3);
+  }
+  .cert-section h2{
+    font-size:clamp(1.4rem,3vw,2rem);
+    font-weight:800;
+    margin:0 0 14px;
+  }
+  .cert-section p{
+    color:var(--grey);
+    max-width:560px;
+    margin:0 auto 10px;
+    font-size:0.95rem;
+    line-height:1.7;
+  }
+  .cert-section .good-dog{
+    font-size:1.1rem;
+    font-weight:700;
+    color:var(--cream);
+    margin-top:20px;
+  }
+
+  /* CTA */
+  .cta-section{
+    padding:80px 24px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at bottom, rgba(232,57,47,0.12), transparent 60%),
+      var(--bg);
+  }
+  .cta-section h2{
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    font-weight:800;
+    margin:0 0 14px;
+  }
+  .cta-section p{color:var(--grey);margin:0 0 28px;font-size:0.95rem;}
+  .cta-btn{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-weight:800;
+    font-size:1rem;
+    padding:15px 32px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:transform 0.15s ease, background 0.2s ease;
+    box-shadow:0 10px 30px rgba(232,57,47,0.3);
+  }
+  .cta-btn:hover{background:var(--red-dark);transform:translateY(-2px);}
+  .cta-ghost{
+    display:inline-block;
+    margin-left:16px;
+    color:var(--grey);
+    font-size:0.9rem;
+    text-decoration:none;
+    border-bottom:1px solid #333;
+    padding-bottom:2px;
+    transition:color 0.2s;
+  }
+  .cta-ghost:hover{color:var(--cream);}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:36px 24px;color:#6b6b6b;font-size:0.8rem;
+    border-top:1px solid #1e1e1e;
+  }
+  footer .logo{display:block;margin-bottom:8px;color:var(--cream);text-decoration:none;}
+
+  /* RESPONSIVE */
+  @media(max-width:700px){
+    .comic-strip{grid-template-columns:repeat(2,1fr);}
+    .panel{border-right:1px solid #2a2a2a !important;}
+    .panel:nth-child(2n){border-right:none !important;}
+    .panel:nth-child(3), .panel:nth-child(4){border-top:1px solid #2a2a2a;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:400px){
+    .comic-strip{grid-template-columns:1fr;}
+    .panel{border-right:none !important;border-top:1px solid #2a2a2a;}
+    .panel:first-child{border-top:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Terrified <span>Toys</span></a>
+  <div class="nav-links">
+    <a href="/rabbit">The Rabbit</a>
+    <a href="/deer" class="active">The Deer</a>
+    <a href="/contact">Contact</a>
+    <a href="/#waitlist" class="nav-cta">Join Waitlist</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Certified Pest Species · Introduced 1851</span>
+    <h1>The Deer</h1>
+    <p class="hero-sub">Brought over as a gift to the colony. Spent the next 170 years eating New Zealand's native forest. Your dog has been briefed.</p>
+  </div>
+</header>
+
+<!-- CARTOON STRIP -->
+<section class="strip-section">
+  <div class="wrap">
+    <p class="strip-label">A life of unexpected consequences</p>
+    <div class="comic-strip">
+      <div class="panel">
+        <span class="panel-num">01</span>
+        <div class="panel-art">🏭</div>
+        <p class="panel-title">Born in a factory</p>
+        <p class="panel-caption">Antlers included. False sense of security not included.</p>
+      </div>
+      <div class="panel">
+        <span class="panel-num">02</span>
+        <div class="panel-art">📦</div>
+        <p class="panel-title">Shipped with care</p>
+        <p class="panel-caption">The care was for the packaging.</p>
+      </div>
+      <div class="panel">
+        <span class="panel-num">03</span>
+        <div class="panel-art">🐕</div>
+        <p class="panel-title">Met the dog</p>
+        <p class="panel-caption">Stags don't run from dogs. This one reconsidered.</p>
+      </div>
+      <div class="panel">
+        <span class="panel-num">04</span>
+        <div class="panel-art">🗑️</div>
+        <p class="panel-title">Gone to the high country</p>
+        <p class="panel-caption">The circle of life, expressed through polyester.</p>
+      </div>
+    </div>
+    <p class="strip-note">Illustrations: Trinity Merwyn — placeholder panels, final artwork coming.</p>
+  </div>
+</section>
+
+<!-- CONSERVATION BACKSTORY -->
+<section class="conservation">
+  <div class="wrap-narrow">
+    <span class="section-eyebrow">The backstory</span>
+    <h2>Introduced for sport. The sport has changed.</h2>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-num">1851</span>
+        <span class="stat-label">Year red deer were first liberated in Canterbury — a gift from Queen Victoria</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">250,000+</span>
+        <span class="stat-label">Estimated deer culled annually by helicopter in the 1970s at peak population</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">14</span>
+        <span class="stat-label">Species of deer established in New Zealand across different regions</span>
+      </div>
+    </div>
+
+    <p>The red deer came to New Zealand with the best intentions. Acclimatisation societies of the colonial era wanted to make the landscape familiar — and what better than the noble stag, symbol of the hunt, a sport befitting the new colony's aspirations? The first liberation was in Canterbury in 1851. <strong>Within a generation, deer were everywhere.</strong></p>
+
+    <p>New Zealand's native forest had evolved without large browsing mammals. Nothing here had ever eaten at eye level — native plants had no evolutionary defences against it. Deer ate the understory down to soil level. They browsed regenerating trees before they could establish. The native birds that depended on those trees for berries, seeds, and shelter found their food sources systematically removed.</p>
+
+    <p>By the mid-20th century, the New Zealand government had declared deer a noxious animal and began paying professional cullers to reduce numbers. In the 1960s and 1970s, helicopter-based culling became a major industry — at peak, over 250,000 deer were killed annually. The venison trade that followed, and the shift to deer farming in the 1970s and 80s, changed the economics of deer management permanently.</p>
+
+    <p>Today deer are managed through a combination of <strong>licensed hunting, commercial venison operations, and ongoing DOC culling operations</strong> in national parks. The NZ Deerstalkers Association plays an active role in managing populations. Deer are still expanding into new territories. Native forest, in places left ungrazed, is slowly returning.</p>
+
+    <p>The deer on your dog's toy is a red stag — the original introduction, the one responsible for 170 years of forest change. It has full antlers. It knows what your dog represents. <strong>It was always going to end this way.</strong></p>
+  </div>
+</section>
+
+<!-- CERTIFIED BADGE -->
+<section class="cert-section">
+  <div class="wrap-narrow">
+    <div class="cert-tag">Certified Pest Species</div>
+    <h2>What's on the tag</h2>
+    <p>Every Terrified Toys deer comes with a rip-tag attached. Not for decoration.</p>
+    <p><em>Red Deer (Cervus elaphus). Introduced 1851 — a gift from Queen Victoria. Ate the understory. Stayed anyway. Declared noxious. Still here. Your dog is doing the mahi DOC started.</em></p>
+    <p class="good-dog">Good dog.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2>Your Dog Already Knew This Was Coming.</h2>
+    <p>First run of 25. Waitlist members get priority access and the founding price.</p>
+    <a href="/#waitlist" class="cta-btn">Reserve Mine</a>
+    <a href="/rabbit" class="cta-ghost">← Meet the rabbit</a>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="logo">Terrified Toys</a>
+  It knows what's coming. So will you.
+</footer>
+
+</body>
+</html>

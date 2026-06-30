@@ -19,6 +19,18 @@ Ready-to-paste copy for Canva designs. Pull visual identity (palette/type) from 
 **Micro-copy (corner tag, mimics the "It knew" rip-tag from the live site):**
 > IT KNEW
 
+**Conservation variant — headline extension (for a secondary hero section or "about" beat on the product page):**
+> It knew. It was a pest.
+
+**Conservation variant — subhead:**
+> The possum, rabbit, and deer on these toys are real NZ pest species. Your dog understands the assignment.
+
+**Conservation variant — supporting line:**
+> Doing its bit for New Zealand, one toy at a time.
+
+**Conservation variant — secondary rip-tag badge (alongside "IT KNEW"):**
+> CERTIFIED PEST SPECIES
+
 ---
 
 ## 2. Social Ads — Facebook/Instagram Feed (square or 4:5)
@@ -55,6 +67,42 @@ Ready-to-paste copy for Canva designs. Pull visual identity (palette/type) from 
 **Description:**
 > Real plush, real durability — then it's fair game. $30 founding price.
 
+### Ad variant D — conservation angle (all designs)
+*Use this alongside humour variants, not instead of. Works as a second creative in the same ad set — shows to people who've already seen variant A and rewards a different register.*
+
+**Primary text:**
+> Your dog is a conservation hero. He doesn't know that. The possum does.
+
+**Headline:**
+> Good Dog. Great Dog.
+
+**Description:**
+> Real NZ pest species, real terrified expression. $30 founding price.
+
+### Ad variant E — conservation angle, possum-specific
+*Possum has the strongest NZ conservation story — this variant goes harder on the "actually correct" angle for NZ audiences.*
+
+**Primary text:**
+> Introduced to New Zealand in 1837. Your dog just helped.
+
+**Headline:**
+> Pest Control. Good Boy.
+
+**Description:**
+> The possum knew what it was. So does your dog. $30 founding price.
+
+### Ad variant F — conservation angle, deer-specific (Hunting Lad)
+*Pairs well with Hunting Lad persona targeting — the pest angle overlaps directly with hunting culture.*
+
+**Primary text:**
+> Went for the rimu seedlings. Got the dog instead.
+
+**Headline:**
+> Your Dog. NZ's Pest Problem. Sorted.
+
+**Description:**
+> DOC approved. (Not literally.) Real pest species, real terrified face. $30 founding price.
+
 ---
 
 ## 3. Stories Format (9:16 — Instagram/Facebook Stories)
@@ -72,6 +120,11 @@ Keep text in the safe zone (middle 60% vertically) — Stories crop aggressively
 
 **Countdown sticker label (if using Instagram's countdown sticker once a real date exists):**
 > Demo stock arrives in...
+
+**Conservation variant (3-frame sequence — rewards people who watch through):**
+> Frame 1: It knew.
+> Frame 2: It was a pest.
+> Frame 3: Good dog. [CTA: Reserve Yours →]
 
 ---
 
@@ -101,6 +154,12 @@ See `packaging-brief.md` for full spec (size, materials, required regulatory inf
 **Back label, brand blurb (short):**
 > Built to be destroyed. That's the whole point. Genuinely durable plush with a face that knows exactly what's coming — yours will too, eventually.
 
+**Back label, brand blurb — conservation variant (swap in or run alongside on back of card):**
+> A genuinely good chew toy. Also, a pest. The possum (rabbit / deer) on this toy is a real NZ pest species — introduced, established, and actively managed. Your dog is participating in something historically significant. Probably not intentionally.
+
+**Back label, small-print conservation note (below blurb, smaller text):**
+> Certified pest species. Your dog is doing its bit.
+
 **Back label, call-to-action (drives to site, not just decorative):**
 > Show us the damage: @terrifiedtoys
 
@@ -129,3 +188,6 @@ See `packaging-brief.md` for full spec (size, materials, required regulatory inf
 - Don't use exclamation points anywhere above — if a line feels like it needs one to land, rewrite the line instead (per `brand-strategy.md` voice rules).
 - Swap "$30 founding price" copy to "$40" language once the founding window closes — keep a version of each graphic with both price points ready so this is a copy swap, not a re-design.
 - None of this copy references "gore" or blood — if a packaging/ad layout needs to gesture at the red-stuffing detail visually, let the product photo do that work; copy should stay focused on the expression/joke per the do/don't list in `brand-strategy.md`.
+- **Conservation variants:** do not lead with conservation copy in the same ad set as humour copy — run them as separate creatives to separate audiences or as sequence (humour first, conservation second). The conservation angle is a reward for paying attention, not the hook.
+- The "CERTIFIED PEST SPECIES" badge on the rip-tag or packaging is a small-text secondary element, not a front-of-pack headline. It should be discoverable, not announced.
+- Per-design notes: possum conservation copy is strongest (use variants D/E for possum-specific targeting); rabbit copy should stay humour-led; deer/stag can go either way depending on persona (hunting angle = pest-angle welcome, general audience = humour-led).

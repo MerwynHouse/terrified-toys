@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rabbit — Terrified Toys</title>
+<meta name="description" content="Meet the rabbit. A certified pest species with a lot to answer for, and now a lot to fear.">
+<style>
+  :root{
+    --bg: #0d0d0e;
+    --bg-soft: #161616;
+    --bg-card: #1a1a1a;
+    --red: #e8392f;
+    --red-dark: #b9261d;
+    --cream: #f4ead8;
+    --grey: #9a9a9a;
+    --green: #3a7d44;
+    --green-dim: rgba(58,125,68,0.15);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  a{color:var(--red);}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .wrap-narrow{max-width:740px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;
+    max-width:1100px;margin:0 auto;
+  }
+  .logo{
+    font-weight:800;letter-spacing:0.5px;font-size:1.1rem;
+    text-transform:uppercase;text-decoration:none;color:var(--cream);
+  }
+  .logo span{color:var(--red);}
+  .nav-links{display:flex;align-items:center;gap:24px;}
+  .nav-links a{
+    color:var(--grey);font-size:0.85rem;text-decoration:none;
+    transition:color 0.2s;
+  }
+  .nav-links a:hover{color:var(--cream);}
+  .nav-links a.active{color:var(--cream);}
+  .nav-cta{
+    border:1px solid var(--red);
+    color:var(--cream) !important;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:0.85rem;
+    text-decoration:none;
+    font-weight:600;
+    transition:background 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--red);}
+
+  /* HERO */
+  header.hero{
+    padding:60px 24px 80px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at top, rgba(58,125,68,0.12), transparent 60%),
+      var(--bg);
+    border-bottom:1px solid #1e1e1e;
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--green);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:0.75rem;
+    font-weight:700;
+    margin-bottom:18px;
+    border:1px solid rgba(58,125,68,0.5);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(2.6rem,6vw,4.5rem);
+    line-height:1.0;
+    margin:0 0 18px;
+    font-weight:800;
+    letter-spacing:-1px;
+  }
+  .hero-sub{
+    max-width:560px;margin:0 auto;
+    color:var(--grey);
+    font-size:1.1rem;
+  }
+
+  /* CARTOON STRIP */
+  .strip-section{
+    padding:70px 24px;
+    background:var(--bg-soft);
+    border-bottom:1px solid #1e1e1e;
+  }
+  .strip-label{
+    text-align:center;
+    font-size:0.75rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--grey);
+    margin-bottom:32px;
+    font-weight:700;
+  }
+  .comic-strip{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+    max-width:900px;
+    margin:0 auto;
+    border:1px solid #2a2a2a;
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .panel{
+    background:var(--bg-card);
+    padding:28px 20px 24px;
+    text-align:center;
+    border-right:1px solid #2a2a2a;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .panel:last-child{border-right:none;}
+  .panel-num{
+    position:absolute;
+    top:10px;left:14px;
+    font-size:0.65rem;
+    font-weight:700;
+    color:#333;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .panel-art{
+    width:90px;height:90px;
+    border-radius:50%;
+    background:var(--bg-soft);
+    border:2px solid #2a2a2a;
+    display:flex;align-items:center;justify-content:center;
+    font-size:2.4rem;
+    margin:0 auto 16px;
+    /* Placeholder — replace with Trinity's illustrations */
+  }
+  .panel-title{
+    font-size:0.8rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    margin:0 0 8px;
+    color:var(--cream);
+  }
+  .panel-caption{
+    font-size:0.78rem;
+    color:var(--grey);
+    line-height:1.4;
+    margin:0;
+    font-style:italic;
+  }
+  .panel-4 .panel-art{
+    border-color:rgba(232,57,47,0.3);
+  }
+  .strip-note{
+    text-align:center;
+    margin-top:18px;
+    font-size:0.75rem;
+    color:#444;
+    font-style:italic;
+  }
+
+  /* CONSERVATION SECTION */
+  .conservation{
+    padding:80px 24px;
+  }
+  .conservation h2{
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    font-weight:800;
+    margin:0 0 8px;
+  }
+  .conservation .section-eyebrow{
+    display:inline-block;
+    font-size:0.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--green);
+    border:1px solid rgba(58,125,68,0.4);
+    padding:4px 12px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .conservation p{
+    color:var(--grey);
+    font-size:1rem;
+    line-height:1.8;
+    margin:0 0 20px;
+  }
+  .conservation p strong{color:var(--cream);}
+  .stat-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin:36px 0;
+  }
+  .stat-card{
+    background:var(--bg-soft);
+    border:1px solid #232323;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+  }
+  .stat-card .stat-num{
+    font-size:1.8rem;
+    font-weight:800;
+    color:var(--red);
+    display:block;
+    margin-bottom:4px;
+  }
+  .stat-card .stat-label{
+    font-size:0.8rem;
+    color:var(--grey);
+    line-height:1.3;
+  }
+
+  /* CERTIFIED BADGE SECTION */
+  .cert-section{
+    padding:60px 24px;
+    background:var(--bg-soft);
+    border-top:1px solid #1e1e1e;
+    border-bottom:1px solid #1e1e1e;
+    text-align:center;
+  }
+  .cert-tag{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-size:0.8rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding:10px 22px;
+    border-radius:4px;
+    margin-bottom:24px;
+    transform:rotate(-2deg);
+    box-shadow:0 8px 24px rgba(232,57,47,0.3);
+  }
+  .cert-section h2{
+    font-size:clamp(1.4rem,3vw,2rem);
+    font-weight:800;
+    margin:0 0 14px;
+  }
+  .cert-section p{
+    color:var(--grey);
+    max-width:560px;
+    margin:0 auto 10px;
+    font-size:0.95rem;
+    line-height:1.7;
+  }
+  .cert-section .good-dog{
+    font-size:1.1rem;
+    font-weight:700;
+    color:var(--cream);
+    margin-top:20px;
+  }
+
+  /* CTA */
+  .cta-section{
+    padding:80px 24px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at bottom, rgba(232,57,47,0.12), transparent 60%),
+      var(--bg);
+  }
+  .cta-section h2{
+    font-size:clamp(1.5rem,3vw,2.1rem);
+    font-weight:800;
+    margin:0 0 14px;
+  }
+  .cta-section p{color:var(--grey);margin:0 0 28px;font-size:0.95rem;}
+  .cta-btn{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-weight:800;
+    font-size:1rem;
+    padding:15px 32px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:transform 0.15s ease, background 0.2s ease;
+    box-shadow:0 10px 30px rgba(232,57,47,0.3);
+  }
+  .cta-btn:hover{background:var(--red-dark);transform:translateY(-2px);}
+  .cta-ghost{
+    display:inline-block;
+    margin-left:16px;
+    color:var(--grey);
+    font-size:0.9rem;
+    text-decoration:none;
+    border-bottom:1px solid #333;
+    padding-bottom:2px;
+    transition:color 0.2s;
+  }
+  .cta-ghost:hover{color:var(--cream);}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:36px 24px;color:#6b6b6b;font-size:0.8rem;
+    border-top:1px solid #1e1e1e;
+  }
+  footer .logo{display:block;margin-bottom:8px;color:var(--cream);text-decoration:none;}
+
+  /* RESPONSIVE */
+  @media(max-width:700px){
+    .comic-strip{grid-template-columns:repeat(2,1fr);}
+    .panel{border-right:1px solid #2a2a2a !important;}
+    .panel:nth-child(2n){border-right:none !important;}
+    .panel:nth-child(3), .panel:nth-child(4){border-top:1px solid #2a2a2a;}
+    .nav-links{display:none;}
+  }
+  @media(max-width:400px){
+    .comic-strip{grid-template-columns:1fr;}
+    .panel{border-right:none !important;border-top:1px solid #2a2a2a;}
+    .panel:first-child{border-top:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Terrified <span>Toys</span></a>
+  <div class="nav-links">
+    <a href="/rabbit" class="active">The Rabbit</a>
+    <a href="/deer">The Deer</a>
+    <a href="/contact">Contact</a>
+    <a href="/#waitlist" class="nav-cta">Join Waitlist</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Certified Pest Species · Introduced 1838</span>
+    <h1>The Rabbit</h1>
+    <p class="hero-sub">Responsible for millions of dollars in agricultural damage, decades of legislative panic, and one very good dog toy.</p>
+  </div>
+</header>
+
+<!-- CARTOON STRIP -->
+<section class="strip-section">
+  <div class="wrap">
+    <p class="strip-label">A brief and dignified life</p>
+    <div class="comic-strip">
+      <div class="panel">
+        <span class="panel-num">01</span>
+        <div class="panel-art">🏭</div>
+        <p class="panel-title">Born in a factory</p>
+        <p class="panel-caption">Every terrified face is hand-crafted. This one sensed something was off from the start.</p>
+      </div>
+      <div class="panel">
+        <span class="panel-num">02</span>
+        <div class="panel-art">📦</div>
+        <p class="panel-title">Posted with care</p>
+        <p class="panel-caption">Spent 3–7 business days in the dark, reconsidering its choices.</p>
+      </div>
+      <div class="panel">
+        <span class="panel-num">03</span>
+        <div class="panel-art">🐕</div>
+        <p class="panel-title">Introduced to the dog</p>
+        <p class="panel-caption">The moment it had been dreading since manufacturing.</p>
+      </div>
+      <div class="panel panel-4">
+        <span class="panel-num">04</span>
+        <div class="panel-art">🗑️</div>
+        <p class="panel-title">Returned to the earth</p>
+        <p class="panel-caption">Distinguished service. Good dog.</p>
+      </div>
+    </div>
+    <p class="strip-note">Illustrations: Trinity Merwyn — placeholder panels, final artwork coming.</p>
+  </div>
+</section>
+
+<!-- CONSERVATION BACKSTORY -->
+<section class="conservation">
+  <div class="wrap-narrow">
+    <span class="section-eyebrow">The backstory</span>
+    <h2>Why New Zealand's rabbits are not your Easter bunny</h2>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <span class="stat-num">1838</span>
+        <span class="stat-label">Year rabbits were first deliberately liberated in New Zealand</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">1876</span>
+        <span class="stat-label">Year the first Rabbit Nuisance Act was passed — 38 years after introduction</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">6</span>
+        <span class="stat-label">Rabbits can produce up to six litters a year, each with up to eight kits</span>
+      </div>
+    </div>
+
+    <p>The European rabbit arrived in New Zealand as a <strong>deliberate introduction</strong>. Acclimatisation societies of the 1800s believed that importing familiar European fauna would make the new colony feel more like home. The rabbit was considered charming, harmless, and — importantly — edible.</p>
+
+    <p>By the 1870s, Otago and Marlborough were overrun. Rabbits don't stop at charming. They graze native tussock down to bare soil, outcompete sheep for pasture, and undermine riverbanks through burrowing. The land that had supported generations of native plants and birds was, within decades, being held in place by essentially nothing. The soil began to move.</p>
+
+    <p>The legislative response was extraordinary. New Zealand passed <strong>twelve separate pieces of rabbit-related legislation</strong> between 1876 and 1956, including the Rabbit Nuisance Act, the Rabbit Act, and eventually the Rabbit and Land Management Programme of the 1990s. Rabbit boards — organisations with the specific mandate of killing rabbits — were established by law across the South Island. At their peak, they employed hundreds of people.</p>
+
+    <p>Calicivirus (rabbit haemorrhagic disease) was introduced in the 1990s as a biocontrol agent, causing substantial population crashes. The debate about its ethics was significant. The damage to native ecosystems was more significant.</p>
+
+    <p>Today the rabbit is managed but not eradicated — too widespread, too reproductive. What's changed is that New Zealanders have largely stopped pretending the rabbit is a pet. <strong>It's a pest. It's on the list. And your dog already knew that.</strong></p>
+  </div>
+</section>
+
+<!-- CERTIFIED BADGE -->
+<section class="cert-section">
+  <div class="wrap-narrow">
+    <div class="cert-tag">Certified Pest Species</div>
+    <h2>What's on the tag</h2>
+    <p>Every Terrified Toys rabbit comes with a rip-tag attached. Not for decoration.</p>
+    <p><em>European Rabbit (Oryctolagus cuniculus). Introduced 1838. Agricultural pest, soil erosion agent, legislative nightmare. Still here. Still multiplying. Your dog has been briefed.</em></p>
+    <p class="good-dog">Good dog.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2>Your Dog Is Ready. The Rabbit Is Not.</h2>
+    <p>First run of 25. Waitlist members get priority access and the founding price.</p>
+    <a href="/#waitlist" class="cta-btn">Reserve Mine</a>
+    <a href="/deer" class="cta-ghost">Meet the deer →</a>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="logo">Terrified Toys</a>
+  It knows what's coming. So will you.
+</footer>
+
+</body>
+</html>

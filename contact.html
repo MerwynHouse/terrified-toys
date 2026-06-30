@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Terrified Toys</title>
+<meta name="description" content="Questions, wholesale inquiries, or just want to share what your dog did. We want to know.">
+<style>
+  :root{
+    --bg: #0d0d0e;
+    --bg-soft: #161616;
+    --bg-card: #1a1a1a;
+    --red: #e8392f;
+    --red-dark: #b9261d;
+    --cream: #f4ead8;
+    --grey: #9a9a9a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+    min-height:100vh;
+  }
+  a{color:var(--red);}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  .wrap-narrow{max-width:640px;margin:0 auto;padding:0 24px;}
+
+  /* NAV */
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 24px;
+    max-width:1100px;margin:0 auto;
+  }
+  .logo{
+    font-weight:800;letter-spacing:0.5px;font-size:1.1rem;
+    text-transform:uppercase;text-decoration:none;color:var(--cream);
+  }
+  .logo span{color:var(--red);}
+  .nav-links{display:flex;align-items:center;gap:24px;}
+  .nav-links a{
+    color:var(--grey);font-size:0.85rem;text-decoration:none;
+    transition:color 0.2s;
+  }
+  .nav-links a:hover{color:var(--cream);}
+  .nav-links a.active{color:var(--cream);}
+  .nav-cta{
+    border:1px solid var(--red);
+    color:var(--cream) !important;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:0.85rem;
+    text-decoration:none;
+    font-weight:600;
+    transition:background 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--red);}
+
+  /* PAGE HERO */
+  header.hero{
+    padding:60px 24px 70px;
+    text-align:center;
+    border-bottom:1px solid #1e1e1e;
+  }
+  .eyebrow{
+    display:inline-block;
+    color:var(--red);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:0.75rem;
+    font-weight:700;
+    margin-bottom:18px;
+    border:1px solid rgba(232,57,47,0.5);
+    padding:6px 14px;
+    border-radius:999px;
+  }
+  h1{
+    font-size:clamp(2rem,5vw,3.2rem);
+    line-height:1.05;
+    margin:0 0 14px;
+    font-weight:800;
+    letter-spacing:-0.5px;
+  }
+  .hero-sub{
+    max-width:520px;margin:0 auto;
+    color:var(--grey);
+    font-size:1rem;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section{padding:70px 24px;}
+
+  /* REASON PILLS */
+  .reasons{
+    display:flex;flex-wrap:wrap;gap:10px;
+    margin-bottom:40px;
+    justify-content:center;
+  }
+  .reason-pill{
+    background:var(--bg-soft);
+    border:1px solid #2a2a2a;
+    border-radius:999px;
+    padding:8px 18px;
+    font-size:0.82rem;
+    color:var(--grey);
+    cursor:pointer;
+    transition:all 0.2s;
+    user-select:none;
+  }
+  .reason-pill:hover,.reason-pill.selected{
+    border-color:var(--red);
+    color:var(--cream);
+    background:rgba(232,57,47,0.08);
+  }
+
+  /* FORM */
+  .contact-form{
+    background:var(--bg-soft);
+    border:1px solid #232323;
+    border-radius:20px;
+    padding:40px 36px;
+    max-width:580px;
+    margin:0 auto;
+  }
+  .form-row{display:flex;gap:16px;}
+  .form-group{
+    display:flex;flex-direction:column;gap:7px;
+    margin-bottom:20px;
+    flex:1;
+  }
+  label{
+    font-size:0.8rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:var(--grey);
+  }
+  input, textarea, select{
+    background:var(--bg);
+    border:1px solid #2c2c2c;
+    color:var(--cream);
+    padding:13px 15px;
+    border-radius:10px;
+    font-size:0.95rem;
+    outline:none;
+    font-family:inherit;
+    width:100%;
+    transition:border-color 0.2s;
+  }
+  input:focus, textarea:focus, select:focus{border-color:var(--red);}
+  input::placeholder, textarea::placeholder{color:#555;}
+  select option{background:var(--bg-soft);}
+  textarea{resize:vertical;min-height:130px;line-height:1.5;}
+
+  .submit-btn{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-weight:800;
+    font-size:1rem;
+    padding:15px 32px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    width:100%;
+    transition:background 0.2s ease, transform 0.15s ease;
+    box-shadow:0 8px 24px rgba(232,57,47,0.25);
+    font-family:inherit;
+  }
+  .submit-btn:hover{background:var(--red-dark);transform:translateY(-1px);}
+
+  .form-note{
+    text-align:center;
+    color:var(--grey);
+    font-size:0.78rem;
+    margin-top:14px;
+  }
+
+  .success-msg,.error-msg{
+    display:none;text-align:center;
+    padding:16px;border-radius:12px;font-weight:600;
+    margin-top:16px;
+  }
+  .success-msg{background:rgba(60,170,90,0.1);border:1px solid rgba(60,170,90,0.35);color:#7fd99a;}
+  .error-msg{background:rgba(232,57,47,0.1);border:1px solid rgba(232,57,47,0.35);color:#f08a83;}
+
+  /* OTHER WAYS */
+  .other-ways{
+    padding:0 24px 80px;
+    text-align:center;
+  }
+  .other-ways h2{
+    font-size:1.1rem;
+    font-weight:700;
+    margin:0 0 8px;
+    color:var(--grey);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:0.75rem;
+  }
+  .other-ways p{
+    color:var(--grey);font-size:0.9rem;margin:0 0 6px;
+  }
+  .other-ways a{color:var(--red);}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:36px 24px;color:#6b6b6b;font-size:0.8rem;
+    border-top:1px solid #1e1e1e;
+  }
+  footer .logo{display:block;margin-bottom:8px;color:var(--cream);text-decoration:none;}
+
+  @media(max-width:600px){
+    .form-row{flex-direction:column;gap:0;}
+    .contact-form{padding:28px 20px;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Terrified <span>Toys</span></a>
+  <div class="nav-links">
+    <a href="/rabbit">The Rabbit</a>
+    <a href="/deer">The Deer</a>
+    <a href="/contact" class="active">Contact</a>
+    <a href="/#waitlist" class="nav-cta">Join Waitlist</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">We read every message</span>
+    <h1>Say something.</h1>
+    <p class="hero-sub">Orders, wholesale, press, conservation partnerships, or evidence of what your dog did. All welcome.</p>
+  </div>
+</header>
+
+<section class="contact-section">
+  <div class="wrap-narrow">
+
+    <div class="contact-form">
+      <!-- Formspree endpoint — replace YOUR_FORM_ID with the ID from formspree.io -->
+      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="First name is fine" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reason">What's this about</label>
+          <select id="reason" name="reason">
+            <option value="" disabled selected>Pick one</option>
+            <option value="order">Order question</option>
+            <option value="wholesale">Wholesale / retail inquiry</option>
+            <option value="press">Press or media</option>
+            <option value="conservation">Conservation partnership</option>
+            <option value="dog-crime">Evidence of a dog crime</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind. Or attach a photo of the damage." required></textarea>
+        </div>
+
+        <!-- Hidden field so Formspree knows where to send -->
+        <input type="hidden" name="_replyto" id="replyto">
+        <input type="hidden" name="_subject" value="Terrified Toys — Contact Form">
+
+        <button type="submit" class="submit-btn">Send it</button>
+        <p class="form-note">We usually reply within a day or two. More slowly on weekends.</p>
+
+        <div class="success-msg" id="successMsg">Got it. We'll be in touch shortly.</div>
+        <div class="error-msg" id="errorMsg">Something went wrong. Try emailing us directly at <a href="mailto:TerrifiedToys@gmail.com">TerrifiedToys@gmail.com</a>.</div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<section class="other-ways">
+  <div class="wrap">
+    <h2>Other ways</h2>
+    <p>Email: <a href="mailto:TerrifiedToys@gmail.com">TerrifiedToys@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/terrifiedtoys" target="_blank" rel="noopener">@terrifiedtoys</a></p>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="logo">Terrified Toys</a>
+  It knows what's coming. So will you.
+</footer>
+
+<script>
+  var form = document.getElementById('contactForm');
+  var successMsg = document.getElementById('successMsg');
+  var errorMsg = document.getElementById('errorMsg');
+
+  // Sync reply-to field
+  document.getElementById('email').addEventListener('input', function(){
+    document.getElementById('replyto').value = this.value;
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorMsg.style.display = 'none';
+    successMsg.style.display = 'none';
+
+    var data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if(response.ok){
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    }).catch(function(){
+      errorMsg.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -244,8 +244,13 @@
 <body>
 
 <nav>
-  <div class="logo">Terrified <span>Toys</span></div>
-  <a href="#waitlist" class="nav-cta">Join the Waitlist</a>
+  <a href="/" class="logo" style="text-decoration:none;color:var(--cream);">Terrified <span>Toys</span></a>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <a href="/rabbit" style="color:var(--grey);font-size:0.85rem;text-decoration:none;">The Rabbit</a>
+    <a href="/deer" style="color:var(--grey);font-size:0.85rem;text-decoration:none;">The Deer</a>
+    <a href="/contact" style="color:var(--grey);font-size:0.85rem;text-decoration:none;">Contact</a>
+    <a href="#waitlist" class="nav-cta">Join the Waitlist</a>
+  </div>
 </nav>
 
 <header class="hero">
@@ -324,6 +329,32 @@
   </div>
 </section>
 
+<!-- MEET THE ANIMALS -->
+<section class="section-soft" style="padding:60px 24px;">
+  <div class="wrap">
+    <h2>They Knew What They Signed Up For.</h2>
+    <p class="section-sub">Every design is a real pest species. Every one has a backstory. Your dog doesn't care. But you might.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:760px;margin:0 auto;">
+      <a href="/rabbit" style="text-decoration:none;">
+        <div class="agitate-card" style="transition:border-color 0.2s;cursor:pointer;" onmouseover="this.style.borderColor='#e8392f'" onmouseout="this.style.borderColor='#232323'">
+          <span class="emoji">🐰</span>
+          <h3 style="color:var(--cream);">The Rabbit</h3>
+          <p>Introduced 1838. Twelve pieces of legislation later, still here. The full story behind the terrified face.</p>
+          <span style="color:var(--red);font-size:0.82rem;font-weight:700;">Read the backstory →</span>
+        </div>
+      </a>
+      <a href="/deer" style="text-decoration:none;">
+        <div class="agitate-card" style="transition:border-color 0.2s;cursor:pointer;" onmouseover="this.style.borderColor='#e8392f'" onmouseout="this.style.borderColor='#232323'">
+          <span class="emoji">🦌</span>
+          <h3 style="color:var(--cream);">The Deer</h3>
+          <p>Introduced 1851 — a gift from Queen Victoria. Ate the native forest. Declared noxious. Still here.</p>
+          <span style="color:var(--red);font-size:0.82rem;font-weight:700;">Read the backstory →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="waitlist">
   <div class="wrap">
     <h2>Join The Waitlist</h2>
@@ -341,7 +372,12 @@
 </section>
 
 <footer>
-  <span class="logo">Terrified Toys</span>
+  <a href="/" class="logo" style="text-decoration:none;">Terrified Toys</a>
+  <div style="margin-bottom:12px;">
+    <a href="/rabbit" style="color:#6b6b6b;text-decoration:none;margin:0 10px;font-size:0.8rem;">The Rabbit</a>
+    <a href="/deer" style="color:#6b6b6b;text-decoration:none;margin:0 10px;font-size:0.8rem;">The Deer</a>
+    <a href="/contact" style="color:#6b6b6b;text-decoration:none;margin:0 10px;font-size:0.8rem;">Contact</a>
+  </div>
   It knows what's coming. So will you.
 </footer>
 

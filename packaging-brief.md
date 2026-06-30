@@ -39,8 +39,16 @@ Same voice rules as everywhere else (`brand-strategy.md` Section 2) — deadpan,
 **Front copy (short, punchy):**
 > It knew.
 
+**Front copy — secondary tag/badge (small, rotated — sits alongside or below the "It knew" rip-tag):**
+> CERTIFIED PEST SPECIES
+
 **Back copy (slightly longer, the actual sell):**
 > A genuinely good chew toy with a face that knows exactly what's coming. Built to survive a few rounds before it doesn't. The destruction is the whole point.
+
+**Back copy — conservation variant (swap in for NZ/AU market; fits below the main blurb in smaller text):**
+> The [possum / rabbit / deer] on this toy is a real NZ pest species. Introduced. Established. Actively managed. Your dog understands the assignment.
+
+*Note: swap animal name per SKU — "possum" for The Possum, "rabbit" for The Rabbit, "deer" for The Deer. This variant leans into the conservation layer without over-explaining it — the deadpan register means it reads as both funny and true simultaneously. See `brand-strategy.md` Section 0 for the full dual-pillar rationale.*
 
 **Care instructions (functional, not just decorative):**
 > Supervise play. Remove and discard if damaged. Hand wash only.
